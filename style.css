@@ -1,12 +1,20 @@
-div.bar1{
-    height: 100px;
-    background-color: #80ffcc;
-    color: white;
-    font-size: 60px;
-    font-family: COCO;
-}
-
 @font-face {
     font-family:COCO;
     src: url("Coco-Regular.otf");
+}
+@font-face {
+    font-family:blenda;
+    src: url("Blenda_Script.otf");
+}
+.bar1{
+    height: 100px;
+    background-color: #80ffcc;
+    color: white;
+    font-size: 40px;
+    font-family: blenda;
+    /*text-decoration: underline;*/
+}
+
+body{
+    /*padding-top: 100px;*/
 }
