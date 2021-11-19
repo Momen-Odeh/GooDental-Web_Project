@@ -1,0 +1,12 @@
+div.bar1{
+    height: 100px;
+    background-color: #80ffcc;
+    color: white;
+    font-size: 60px;
+    font-family: COCO;
+}
+
+@font-face {
+    font-family:COCO;
+    src: url("Coco-Regular.otf");
+}
