@@ -31,12 +31,12 @@
 </nav>
 <div class="spaceofnav"></div>
 <div class="imgbg">
-    <h1 class="titlede ">We Build <br>Your Smile</h1>
+    <h1 class="titlede ">We Build <br>Your <span style="color:rgb(83,124,206)">Smile</span> </h1>
     <script>
         window.addEventListener('scroll',()=>{
             let scrl=window.scrollY;
             console.log(scrl);
-            if(scrl >= 0 && scrl<=160)
+            if(scrl >= 0 && scrl<=170)
             {
                 let scrl1=scrl-50;
                 scrl1=scrl1/100;
@@ -51,21 +51,21 @@
 <!---->
         <div class="cardss">
         <div class="card border-info mb-3" style="max-width: 18rem; background-color: #80ffcc ">
-            <div class="card-header">Header</div>
-            <div class="card-body" style="background: #80ffcc ">
-                <h5 class="card-title">Info card title</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <div class="card-header" style="font-family: 'Ubuntu', sans-serif;font-size: 25px ;color: white;font-weight: bold ">Consultation</div>
+            <div class="card-body" style="background: #80ffcc; height: 140px ">
+                <h5 class="card-title" style="color: white">Make Consultation</h5>
+                <p class="card-text" style="color: white">Whichever specific health issue you’re facing, we’llgive you a free consultation on it!</p>
             </div>
         </div>
         </div>
 <!--        -->
 <!---->
-        <div class="cardss" >
+        <div class="cardss"  >
             <div class="card border-info mb-3" style="max-width: 18rem; background-color: #80ffcc ">
-                <div class="card-header">Header</div>
-                <div class="card-body" style="background: #80ffcc ">
-                    <h5 class="card-title">Info card title</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <div class="card-header" style="font-family: 'Ubuntu', sans-serif;font-size: 25px ;color: white;font-weight: bold ">Our Location</div>
+                <div class="card-body" style="background: #80ffcc; height: 140px ">
+                    <h5 class="card-title" style="color: white">See on Map</h5>
+                    <p class="card-text" style="color: white">Palestine-Nablus-Howara-AlQuds Street</p>
                 </div>
             </div>
         </div>
@@ -73,10 +73,10 @@
         <!---->
         <div class="cardss" ">
             <div class="card border-info mb-3" style="max-width: 18rem; background-color: #80ffcc ">
-                <div class="card-header">Header</div>
-                <div class="card-body" style="background: #80ffcc ">
-                    <h5 class="card-title">Info card title</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <div class="card-header" style="font-family: 'Ubuntu', sans-serif;font-size: 25px ;color: white;font-weight: bold ">Appointments</div>
+                <div class="card-body" style="background: #80ffcc ; height: 140px;color: white">
+                    <h5 class="card-title">09-2590077</h5>
+                    <p class="card-text">Call us to register apointment or sign up online. We have worls-class, flexible support.</p>
                 </div>
             </div>
         </div>
@@ -84,17 +84,17 @@
         <!---->
         <div class="cardss"">
             <div class="card border-info mb-3" style="max-width: 18rem; background-color: #80ffcc ">
-                <div class="card-header">Header</div>
-                <div class="card-body" style="background: #80ffcc ">
+                <div class="card-header" style="font-family: 'Ubuntu', sans-serif;font-size: 25px ;color: white;font-weight: bold ;color: white">Opening Hour</div>
+                <div class="card-body" style="background: #80ffcc; height: 140px ;width: 250px;color: white">
                     <h5 class="card-title">Info card title</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <p class="card-text">MON - FRI  8:00 - 21:00 <br>SATURDAY  :00 - 21:00 <br>SUNDAY  9:00 - 17:00</p>
                 </div>
             </div>
         </div>
         <!--        -->
     </div>
 </div>
-jvjsk
+<!--jvjsk-->
 <pre>
 
 

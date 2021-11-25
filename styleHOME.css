@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap');
 * {
     padding:0;
     margin:0;
@@ -24,6 +25,7 @@ span.finallogo{
 }
 label.logo{
     color: white;
+    font-family:'Ubuntu', sans-serif;
     font-size: 35px;
     line-height: 80px;
     font-weight: bold;
@@ -45,7 +47,8 @@ nav ul li{
 }
 nav ul li a {
     color: white;
-    font-size: 17px;
+    font-size: 20px;
+    font-family: 'Ubuntu', sans-serif;
     text-transform: uppercase;
     text-decoration: none;
     padding: 7px 13px;
@@ -121,17 +124,21 @@ div.maintk{
     top: 115%;
     left: 12%;
     z-index: 1;
+    margin: 2px 2px;
 }
 h1.titlede{
     position: absolute;
-    top: 30%;
+    top: 50%;
     left: 5%;
-    font-size: 50px;
+    font-size: 60px;
+    /*color: #80ffcc;*/
+    font-family: 'Ubuntu', sans-serif;
 }
 div.cardss{
     /*position: absolute;*/
     float: left;
     top: 355%;
+    margin: 2px 2px;
     /*left: 20%;*/
     /*transform: translate(-50%, -30%);*/
     z-index: 1;
