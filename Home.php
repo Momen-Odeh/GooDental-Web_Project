@@ -17,7 +17,9 @@
         <i class="fas fa-bars"></i>
     </label>
 <!--    -->
-    <label class="logo">GOODental</label>
+    <span class="finallogo">
+    <img class="logopic" src="img/LOGO1.png">
+    <label class="logo">GOODental</label></span>
     <ul>
         <li><a href="#">Home</a></li>
         <li><a href="#">About</a></li>

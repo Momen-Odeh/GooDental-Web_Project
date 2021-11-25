@@ -18,16 +18,24 @@ nav{
     position: fixed;
 
 }
+span.finallogo{
+    padding: 0 100px;
+}
 label.logo{
     color: white;
     font-size: 35px;
     line-height: 80px;
-    padding: 0 100px;
     font-weight: bold;
+}
+img.logopic{
+    width: 80px;
+    height: 70px;
+
 }
 nav ul{
     float: right;
     margin-right: 20px;
+/*    20*/
 }
 nav ul li{
     display:inline-block;
@@ -40,7 +48,7 @@ nav ul li a {
     text-transform: uppercase;
     text-decoration: none;
     padding: 7px 13px;
-    border-radius: 3px;
+    border-radius: 7px;
 }
 a.active,a:hover{
     background: #b3ffe0;
