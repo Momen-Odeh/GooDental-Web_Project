@@ -107,16 +107,22 @@ a.active,a:hover{
     #check:checked ~ ul{
         left: 0;
     }
-    /*section.bgimg{*/
-    /*    background: url("img/Dental-Banner-scaled.jpg") no-repeat;*/
-    /*    background-size: cover;*/
-    /*    height: calc(100vh - 80px);*/
-
-    /*}*/
 }
-section.bgimg{
-    background: url("img/Dental-Banner-scaled.jpg") no-repeat;
-    background-size: cover;
-    height: calc(100vh - 80px);
 
+div.imgbg{
+    background-image:url("img/bg2.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: calc(90vh);
+}
+div.maintk{
+    position: absolute;
+    top: 40%;
+    left: 20%;
+    transform: translate(-50%, -30%);
+    z-index: 1;
+}
+h1.titlede{
+
+    font-size: 50px;
 }

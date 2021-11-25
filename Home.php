@@ -19,6 +19,7 @@
 <!--    -->
     <span class="finallogo">
     <img class="logopic" src="img/LOGO1.png">
+
     <label class="logo">GOODental</label></span>
     <ul>
         <li><a href="#">Home</a></li>
@@ -29,16 +30,11 @@
     </ul>
 </nav>
 <div class="spaceofnav"></div>
-<section class="bgimg"></section>
-<pre>
+<div class="imgbg">
+    <div class="maintk">
+        <h1 class="titlede ">We Build <br>Your Smile</h1>
 
-
-
-
-
-
-
-
-</pre>
+    </div>
+</div>
 </body>
 </html>
