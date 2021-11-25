@@ -16,6 +16,7 @@ nav{
     height: 80px;
     width: 100%;
     position: fixed;
+    z-index: 100;
 
 }
 span.finallogo{
@@ -117,12 +118,21 @@ div.imgbg{
 }
 div.maintk{
     position: absolute;
-    top: 40%;
-    left: 20%;
-    transform: translate(-50%, -30%);
+    top: 115%;
+    left: 12%;
     z-index: 1;
 }
 h1.titlede{
-
+    position: absolute;
+    top: 30%;
+    left: 5%;
     font-size: 50px;
+}
+div.cardss{
+    /*position: absolute;*/
+    float: left;
+    top: 355%;
+    /*left: 20%;*/
+    /*transform: translate(-50%, -30%);*/
+    z-index: 1;
 }
