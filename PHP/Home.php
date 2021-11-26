@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title>GOODENTAL</title>
     <link rel="stylesheet" href="../CSS/styleHOME.css">
+    <link rel="stylesheet" href="../CSS/c1.css">
     <script src="../SCRIPT/script.js"></script>
     <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
     <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
@@ -94,7 +95,43 @@
         <!--        -->
     </div>
 </div>
-<!--jvjsk-->
+<!--<div class="container">-->
+<!--<div id="about" class="about row">-->
+<!--    <div class="words info col-6">-->
+<!--        <h2>About Us</h2>-->
+<!--        <p>-->
+<!--            We never hesitate in our support, and we never lose sight of our main mission: serving our clients. Our job is to always make it easy for clients to do business with us and strive not only.-->
+<!--        </p>-->
+<!--        <ul type="DISC">-->
+<!--            <li>Simple tooth extractions</li>-->
+<!--            <li>Wisdom teeth removal</li>-->
+<!--            <li>Cleft palate or lip repair</li>-->
+<!--            <li>Removal of tumors found in the oral cavity</li>-->
+<!--            <li>Complex jaw realignment surgeries</li>-->
+<!--        </ul>-->
+<!--    </div>-->
+<!--    <div class="words ved col-6">-->
+<!--        <iframe src="https://www.youtube-nocookie.com/embed/lw7xIB0kPCo?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>-->
+<!--    </div>-->
+<!--</div>-->
+<!--</div>-->
+<div class="about-section">
+    <div class="inner-container">
+        <h1>
+            About Us
+            <div class="borders"></div>
+        </h1>
+        <p class="text"> We never hesitate in our support, and we never lose sight of our main mission: serving our clients. Our job is to always make it easy for clients to do business with us and strive not only</p>
+                    <ul type="DISC" class="text" style="text-align: left">
+                        <li>Simple tooth extractions</li>
+                        <li>Wisdom teeth removal</li>
+                        <li>Cleft palate or lip repair</li>
+                        <li>Removal of tumors found in the oral cavity</li>
+                        <li>Complex jaw realignment surgeries</li>
+                    </ul>
+    </div>
+</div>
+
 <pre>
 
 

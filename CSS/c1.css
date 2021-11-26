@@ -1,0 +1,86 @@
+div.about-section{
+    /*padding: 0 10%;*/
+    /*margin-top: 215px;*/
+}
+/*div.words{*/
+/*    float: left;*/
+/*    width: 50%;*/
+/*    padding: 0 5%;*/
+/*}*/
+
+/*div.words.ved{*/
+/*    border: red 1px solid;*/
+/*    border-radius: 25px;*/
+/*}*/
+/*div.words.info{*/
+/*    border: red 1px solid;*/
+/*    background-color: #86b7fe;*/
+/*    border-radius: 25px;*/
+/*}*/
+.about-section{
+    background: url("../img/about.jpeg");
+    background-size: cover;
+    background-color: #fdfdfd;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    padding: 120px 0;
+    /*height: calc(100vh);*/
+}
+.inner-container{
+width: 40%;
+    float: right;
+    margin: 30px 40px;
+    background-color: #fdfdfd;
+    padding: 100px;
+    border-radius: 30px;
+    /*border-top-left-radius: 30px;*/
+    /*border-bottom-left-radius: 25px;*/
+    box-shadow: -3px 5px 5px 2px #5c636a;
+
+}
+
+.inner-container h1{
+    margin-bottom: 30px;
+    font-size: 30px;
+    font-weight: bold;
+
+}
+
+.borders{
+    height: 4px;
+    width: 140px;
+    background-color: #86b7fe;
+}
+.text{
+    font-size: 17px;
+    color: #545454;
+    line-height: 30px;
+    text-align: left;
+}
+@media screen and (max-width: 1200px){
+.inner-container{
+    padding: 80px;
+}
+}
+
+@media screen and (max-width: 1000px){
+    .about-section{
+        background-size: 100%;
+        padding: 100px 40px;
+    }
+    .inner-container{
+        width: 100%;
+        border-radius: 30px;
+    }
+}
+@media screen and (max-width: 600px){
+    .about-section{
+        padding: 0;
+        background-size: 100%;
+    }
+}
+@media screen and (max-width:1100px){
+    .maintk{
+        display: none;
+    }
+}
