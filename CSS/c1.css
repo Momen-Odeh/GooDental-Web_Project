@@ -29,7 +29,7 @@ div.about-section{
 .inner-container{
 width: 40%;
     float: right;
-    margin: 30px 40px;
+    margin: 30px 70px;
     background-color: #fdfdfd;
     padding: 100px;
     border-radius: 30px;
@@ -66,10 +66,12 @@ width: 40%;
 @media screen and (max-width: 1000px){
     .about-section{
         background-size: 100%;
-        padding: 100px 40px;
+        padding: 50px 50px;
+        margin: 50px 0px;
     }
     .inner-container{
         width: 100%;
+        margin: 0 0 ;
         border-radius: 30px;
     }
 }
@@ -83,4 +85,117 @@ width: 40%;
     .maintk{
         display: none;
     }
+}
+/**/
+.team-section{
+    background-color: #009688;
+    min-height: 100vh;
+    padding: 70px 15px 30px;
+}
+.container{
+    max-width: 1170px;
+    margin: auto;
+}
+.row{
+    display: flex;
+    flex-wrap: wrap;
+}
+.team-section .section-title{
+
+    flex-basis: 100%;
+    max-width: 100%;
+    margin-bottom: 70px;
+}
+.team-section .section-title h1 {
+    font-size: 40px;
+    text-align: center;
+    margin: 0;
+    color: #ffffff;
+    font-weight: 700;
+
+}
+.team-section .team-item{
+    flex-basis: 100%;
+    max-width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.team-section .team-item .item{
+    flex-basis: calc(25% - 30px);
+    max-width: calc(25% - 30px);
+    transition: all .5s ease;
+    margin-bottom: 40px;
+}
+.team-section .team-item .item img{
+    display: block;
+    width: 100%;
+    border-radius: 8px;
+}
+@import url("https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/fontawesome.min.css");
+.team-section .team-item .item .innerpic{
+    position: relative;
+    z-index: 11;
+    padding: 0px 15px;
+}
+.team-section .team-item .item .innerpic .infopic{
+    background-color: #009688;
+    text-align: center;
+    padding: 20px 15px;
+    border-radius: 8px;
+    transition: all .5s ease;
+    margin-top:-40px;
+
+}
+.team-section .team-item .item:hover .infopic{
+    transform: translateY(-20px);
+}
+.team-section .team-item .item:hover{
+    transform: translateY(-20px);
+}
+.team-section .team-item .item .innerpic .infopic h5{
+    margin: 0;
+    font-size: 18px;
+    font-weight: 600;
+    color: #ffffff;
+}
+.team-section .team-item .item .innerpic .infopic p{
+font-size: 16px;
+    font-weight: 400;
+    color: #c5c5c5;
+    margin: 10px 0 0;
+}
+.team-section .team-item .item .innerpic .infopic .social-medea{
+    padding-top: 15px;
+}
+.team-section .team-item .item .innerpic .infopic .social-medea a{
+    display: inline-block;
+    height: 32px;
+    width: 32px;
+    background-color: #ffffff;
+    color: #009688;
+    border-radius: 50%;
+    margin: 0 2px;
+    text-align: center;
+    line-height: 32px;
+    font-size: 16px;
+    transition: all .5s ease;
+}
+team-section .team-item .item .innerpic .infopic .social-medea a:hover{
+    box-shadow: 0 0 10px #000000;
+}
+
+@media (max-width: 991px){
+    .team-section .team-item .item{
+        flex-basis: calc(50%- 30px);
+        max-width: calc(50% - 30px);
+    }
+
+}
+@media (max-width: 767px){
+    .team-section .team-item .item{
+        flex-basis: calc(100%);
+        max-width: calc(100%);
+    }
+
 }
