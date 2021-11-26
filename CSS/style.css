@@ -1,0 +1,21 @@
+@font-face {
+    font-family:COCO;
+    .src: url('LINES/Coco-Regular.otf');
+}
+@font-face {
+    font-family:blenda;
+    .src: url('LINES/Blenda_Script.otf');
+}
+.bar1{
+    height: 100px;
+    background-color: #80ffcc;
+    color: white;
+    font-size: 40px;
+    font-family: blenda;
+    alignment: center;
+    /*text-decoration: underline;*/
+}
+
+body{
+    /*padding-top: 100px;*/
+}
