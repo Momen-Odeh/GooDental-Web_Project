@@ -1,20 +1,23 @@
 body {
     background-image: url('../img/DoctorBackground.png');
+
     background-repeat: no-repeat;
     background-size: cover;
     padding-right: 64%;
     padding-left: 10%;
 
+
 }
 .container {
+
     margin:20%;
     border-radius: 25px;
     box-shadow: 0 0 20px white ;
 }
 .b{
-    font-size: 25px;
-    font-family: COCO;
     color: white;
+    font-size: 25px;
+  font-family: COCO;
 }
 .header {
     padding-top: 60px;
@@ -56,7 +59,9 @@ body {
 }
 
 .header h1 {
-    color: #333;
+
+    color: white;
+
     font-size: 45px;
     margin-bottom: 80px;
 }
@@ -101,7 +106,7 @@ body {
 .main i {
     position: absolute;
     left: 15px;
-    color: #333;
+
     font-size: 16px;
     top: 2px;
 }
