@@ -13,7 +13,7 @@ div.spaceofnav{
     padding-top: 80px;
 }
 nav{
-    background: #80ffcc;
+    background: #00cccc;
     height: 80px;
     width: 100%;
     position: fixed;
@@ -55,7 +55,7 @@ nav ul li a {
     border-radius: 7px;
 }
 a.active,a:hover{
-    background: #b3ffe0;
+    background: #00cccc;
     transition: .5s;
 }
 .checkbtn{
