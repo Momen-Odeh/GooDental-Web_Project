@@ -42,11 +42,15 @@ body {
     box-shadow: 0 0 90px #2c3e50 ;
 }
 .l1{
+    background-position-y: 10px;
+    background-position-x: 10px;
     background-image: url("../img/usericon.svg");
     background-repeat: no-repeat;
     alignment: center;
 }
 .l2{
+    background-position-y: 10px;
+    background-position-x: 10px;
     background-image: url("../img/passwordicon.svg");
     background-repeat: no-repeat;
 

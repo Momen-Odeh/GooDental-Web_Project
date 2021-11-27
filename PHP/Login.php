@@ -16,7 +16,7 @@
     <div class="main">
         <form>
             <input class="l1" type="text" placeholder="Username" >
-           <input class="l2" type="password" placeholder="Password" >
+            <input class="l2" type="password" placeholder="Password" >
             <button class="b"> Login</button>
 
         </form>
