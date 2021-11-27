@@ -1,6 +1,5 @@
 body {
     background-image: url('../img/DoctorBackground.png');
-
     background-repeat: no-repeat;
     background-size: cover;
     padding-right: 64%;
@@ -10,64 +9,71 @@ body {
 }
 .container {
 
-    margin:20%;
+    margin:30%;
     border-radius: 25px;
-    box-shadow: 0 0 20px white ;
+    box-shadow: 0 0 120px #2c3e50 ;
 }
 .b{
     color: white;
     font-size: 25px;
   font-family: COCO;
+
 }
-.header {
-    padding-top: 60px;
-}
+
 .header h1 {
     font-family: COCO;
     color: white;
     font-size: 60px;
-    margin-bottom: 50px;
+
 }
 .main {
     text-align: center;
+
 }
 .main input, button {
-    width: 300px;
-    height: 40px;
     border:none;
     outline: none;
-    padding-left: 40px;
-    box-sizing: border-box;
+
+
     font-size: 18px;
     color: black;
     margin-bottom: 40px;
     border-radius: 15px;
+    box-shadow: 0 0 90px #2c3e50 ;
+}
+.l1{
+    background-image: url("../img/usericon.svg");
+    background-repeat: no-repeat;
+    alignment: center;
+}
+.l2{
+    background-image: url("../img/passwordicon.svg");
+    background-repeat: no-repeat;
+
 }
 .main button {
     padding-left: 0;
-    background-color: darkseagreen;
     letter-spacing: 1px;
     font-weight: bold;
     margin-bottom: 70px;
     border-radius: 15px;
+
 }
 
 
 .header {
     text-align: center;
     padding-top: 75px;
+
 }
 
 .header h1 {
-
-    color: white;
+font-family: COCO;
+    color: #2c3e50;
 
     font-size: 45px;
     margin-bottom: 80px;
-}
-
-.main {
-    text-align: center;
+    font-weight: bold;
 }
 
 .main input, button {
@@ -78,13 +84,14 @@ body {
     padding-left: 40px;
     box-sizing: border-box;
     font-size: 15px;
-    color: #333;
+    color: #2c3e50;
     margin-bottom: 40px;
+    box-shadow: 0 0 20px #2c3e50 ;
 }
 
 .main button {
     padding-left: 0;
-    background-color: #83acf1;
+    background-color: #2c3e50;
     letter-spacing: 1px;
     font-weight: bold;
     margin-bottom: 70px;
@@ -92,25 +99,12 @@ body {
 
 .main button:hover {
     box-shadow: 2px 2px 5px #555;
-    background-color: #7799d4;
+    background-color: #ced9e4;
 }
 .main input:hover {
     box-shadow: 2px 2px 5px #555;
-    background-color: #ddd;
+    background-color:#ced9e4 ;
 }
-
-.main span {
-    position: relative;
-}
-
-.main i {
-    position: absolute;
-    left: 15px;
-
-    font-size: 16px;
-    top: 2px;
-}
-
 
 
 
