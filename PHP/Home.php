@@ -24,10 +24,9 @@
     <label class="logo">GOODental</label></span>
     <ul>
         <li><a href="#">Home</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">location</a></li>
-        <li><a href="#">timing</a></li>
-        <li><a href="#">who developed</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">Location</a></li>
+        <li><a href="#">Profile</a></li>
     </ul>
 </nav>
 <div class="spaceofnav"></div>

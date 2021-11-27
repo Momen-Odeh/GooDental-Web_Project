@@ -27,11 +27,11 @@ div.about-section{
     /*height: calc(100vh);*/
 }
 .inner-container{
-width: 40%;
+width: 35%;
     float: right;
-    margin: 30px 70px;
+    margin: 30px 130px;
     background-color: #fdfdfd;
-    padding: 100px;
+    padding: 50px;
     border-radius: 30px;
     /*border-top-left-radius: 30px;*/
     /*border-bottom-left-radius: 25px;*/
