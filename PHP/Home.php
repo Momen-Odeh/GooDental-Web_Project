@@ -26,7 +26,7 @@
         <li><a href="#">Home</a></li>
         <li><a href="#">Services</a></li>
         <li><a href="#">Location</a></li>
-        <li><a href="#">Sign in</a></li>
+        <li><a href="../PHP/Login.php">Sign in</a></li>
     </ul>
 </nav>
 <div class="spaceofnav"></div>
