@@ -8,7 +8,7 @@
 
 </head>
 <body>
-<h2 class="GOODental" data-text="GOODental">GOODental</h2>
+<div class="GOODental" data-text="GOODental">GOODental</div>
 <div class="container">
     <div class="header">
         <h1 >Login</h1>

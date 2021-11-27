@@ -124,7 +124,7 @@ font-family: COCO;
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
+    width: 0;
     height: 100%;
     color: white;
     -webkit-text-stroke: 0vw green;
@@ -135,13 +135,13 @@ animation:animate 6s linear infinite;
 
 
 }
-.GOODental @keyframes animate  {
+@keyframes animate  {
     0%,10%,100%
     {
         width: 0;
 
     }
-    70%{
+    70%,90%{
         width: 100%;
     }
 

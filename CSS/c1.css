@@ -18,8 +18,9 @@ div.about-section{
 /*    border-radius: 25px;*/
 /*}*/
 .about-section{
-    background: url("../img/about.jpeg");
+    background: url("../img/A dentist.jpg");
     background-size: cover;
+    height: 1000px;
     background-color: #fdfdfd;
     background-repeat: no-repeat;
     overflow: hidden;
@@ -29,9 +30,9 @@ div.about-section{
 .inner-container{
 width: 35%;
     float: right;
-    margin: 30px 130px;
+    margin: -100px 20px;
     background-color: #fdfdfd;
-    padding: 50px;
+    padding: 15px;
     border-radius: 30px;
     /*border-top-left-radius: 30px;*/
     /*border-bottom-left-radius: 25px;*/
