@@ -11,22 +11,19 @@
 
 <div class="container">
     <div class="header">
-        <h1>login</h1>
+        <h1>GOODental</h1>
     </div>
     <div class="main">
         <form>
- 			<span>
- 				<i class="fa fa-user"></i>
- 				<input type="text" placeholder="Username" name="">
- 			</span><br>
-            <span>
- 				<i class="fa fa-lock"></i>
- 				<input type="password" placeholder="Password" name="">
- 			</span><br>
+            <input class="l1" type="text" placeholder="Username" >
+           <input class="l2" type="password" placeholder="Password" >
             <button class="b"> Login</button>
 
         </form>
+
     </div>
 </div>
+
+
 </body>
 </html>
