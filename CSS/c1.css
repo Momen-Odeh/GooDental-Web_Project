@@ -63,7 +63,15 @@ width: 35%;
     padding: 80px;
 }
 }
+@media screen and (max-width: 1400px){
+    .about-section{
+        background-size: 100%;
 
+    }
+    .inner-container{
+        /*float: right;*/
+    }
+}
 @media screen and (max-width: 1000px){
     .about-section{
         background-size: 100%;

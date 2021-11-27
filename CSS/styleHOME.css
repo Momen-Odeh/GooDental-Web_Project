@@ -120,10 +120,10 @@ div.imgbg{
     height: calc(90vh);
 }
 div.maintk{
-    position: absolute;
-    top: 115%;
-    left: 12%;
-    z-index: 1;
+    position: fixed;
+    top: 30%;
+    left: 40%;
+    z-index: 12;
     margin: 2px 2px;
 }
 h1.titlede{
