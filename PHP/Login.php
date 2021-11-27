@@ -8,10 +8,10 @@
 
 </head>
 <body>
-
+<h2 class="GOODental" data-text="GOODental">GOODental</h2>
 <div class="container">
     <div class="header">
-        <h1>GOODental</h1>
+        <h1 >Login</h1>
     </div>
     <div class="main">
         <form>
@@ -20,10 +20,7 @@
             <button class="b"> Login</button>
 
         </form>
-
-    </div>
-</div>
-
+    </div></div>
 
 </body>
 </html>
