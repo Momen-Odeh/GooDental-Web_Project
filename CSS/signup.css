@@ -1,44 +1,31 @@
-.cover {
+body {
+    background-image: url('../img/pic3.jpg');
     background-repeat: no-repeat;
     background-size: cover;
-    margin: -10px;
-    position: fixed;
-
-
-
-}
+    margin: 5%;
+    padding-right: 52%;}
 
 .container {
-    margin: 20%;
-    padding-top: -100px;
-     position: fixed;
+    padding: 10px;
     border-radius: 25px;
-    box-shadow: 0 0 100px white ;
-}
-.b{
-    color: white;
-    font-size: 25px;
-    font-family: COCO;
-
-
-}
+    box-shadow: 0 0 120px #2c3e50 ;}
 
 .header h1 {
     font-family: COCO;
-    color: white;
+    color:#2c3e50 ;
+    margin-left: 30%;
     font-size: 60px;
+    cursor: default;}
 
+.main input, button {
+    border:none;
+    font-size: 25px;
+    color: black;
+    margin-bottom: 10%;
+    border-radius: 25px;
+    box-shadow: 0 0 90px #2c3e50 ;
+    width: 200px;
 }
 .main {
     text-align: center;
-
-}
-.main input, button {
-    border:none;
-    outline: none;
-    font-size: 18px;
-    color: black;
-    margin-bottom: 40px;
-    border-radius: 15px;
-    box-shadow: 0 0 90px #2c3e50 ;
 }

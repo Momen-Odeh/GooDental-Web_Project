@@ -4,32 +4,30 @@ body {
     background-size: cover;
     padding-right: 64%;
     padding-left: 10%;
-
-
 }
 .container {
 
     margin:15%;
     border-radius: 25px;
     box-shadow: 0 0 120px #2c3e50 ;
+
 }
 .b{
     color: white;
     font-size: 25px;
   font-family: COCO;
-
 }
 
 .header h1 {
     font-family: COCO;
     color: white;
     font-size: 60px;
-
+    cursor: default;
 }
 .main {
     text-align: center;
-
 }
+
 .main input, button {
     border:none;
     outline: none;
@@ -51,14 +49,15 @@ body {
     background-position-x: 10px;
     background-image: url("../img/passwordicon.svg");
     background-repeat: no-repeat;
-
 }
+
 .main button {
     padding-left: 0;
     letter-spacing: 1px;
     font-weight: bold;
     margin-bottom: 70px;
     border-radius: 15px;
+
 
 }
 .header {
@@ -113,6 +112,7 @@ font-family: COCO;
     font-family: Poppins,sans-serif;
     font-weight:  bold;
     -webkit-text-stroke: 0.12vw #007780 ;
+    cursor: default;
 
 }
 
@@ -140,6 +140,7 @@ animation:animate 3s linear infinite alternate;
 border: 3px green;
   color:#2c3e50;
      font-family: Poppins;
+     cursor: default;
      font-size:18px;
      padding-bottom: 50px;
  }
@@ -149,9 +150,11 @@ border: 3px green;
      text-decoration: underline;
      font-weight: bold;
 
+
  }
 .signup .sp:hover  {
     color:#ccfcff;
+    cursor: pointer;
 }
 
 
