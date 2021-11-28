@@ -33,8 +33,6 @@ body {
 .main input, button {
     border:none;
     outline: none;
-
-
     font-size: 18px;
     color: black;
     margin-bottom: 40px;
@@ -63,20 +61,16 @@ body {
     border-radius: 15px;
 
 }
-
-
 .header {
     text-align: center;
-    padding-top: 75px;
+    padding-top: 75px;}
 
-}
 
 .header h1 {
 font-family: COCO;
     color: #2c3e50;
-
     font-size: 45px;
-    margin-bottom: 80px;
+    margin-bottom: 60px;
     font-weight: bold;
 }
 
@@ -98,16 +92,16 @@ font-family: COCO;
     background-color: #2c3e50;
     letter-spacing: 1px;
     font-weight: bold;
-    margin-bottom: 70px;
+    margin-bottom: 30px;
 }
 
 .main button:hover {
     box-shadow: 2px 2px 5px #555;
-    background-color: #ced9e4;
+    background-color: #007780;
 }
 .main input:hover {
     box-shadow: 2px 2px 5px #555;
-    background-color:#ced9e4 ;
+    background-color:#ccfcff ;
 }
 .GOODental{
     font-size: 100px;
@@ -115,9 +109,10 @@ font-family: COCO;
     margin-left:250px ;
     margin-bottom: -40px;
     margin-top: 10px;
-    color: #00cccc;
+    color: #2c3e50;
     font-family: Poppins,sans-serif;
-    -webkit-text-stroke: 0.2vw #2c3e50;
+    font-weight:  bold;
+    -webkit-text-stroke: 0.12vw #007780 ;
 
 }
 
@@ -127,31 +122,37 @@ font-family: COCO;
     box-sizing: border-box;
     top: 0;
     left: 0;
-    width: 520px;
-    height: 100%;
+    width: 540px;
+    height: 90%;
     color: white;
-
     border-right: 2px solid white;
     overflow: hidden;
 
-animation:animate 6s linear infinite alternate;
-
-
+animation:animate 3s linear infinite alternate;
 }
  @keyframes animate  {
     0%
-    {
-        width: 0px;
+    {width: 0px;}
+    100%{width: 540px;}
+ }
 
-    }
-    100%{
-        width: 520px;
+ .signup{
+border: 3px green;
+  color:#2c3e50;
+     font-family: Poppins;
+     font-size:18px;
+     padding-bottom: 50px;
+ }
 
-    }
+ .sp{
+     color: white;
+     text-decoration: underline;
+     font-weight: bold;
 
-
+ }
+.signup .sp:hover  {
+    color:#ccfcff;
 }
-
 
 
 
