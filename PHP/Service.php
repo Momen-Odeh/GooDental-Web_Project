@@ -65,7 +65,44 @@
                 <p>The first thing you think about when you have tooth pain is where to find a reliable dentist.</p>
             </div>
         </div>
+        <br>
     </div>
 </div>
+<div class="service">
+    <div class="content">
+        <div class="card">
+            <div class="box">
+                <i class="fas fa-heartbeat"></i>
+                <h3>Children's Dentistry</h3>
+                <p>Here at GOODental Clinic, we make Pediatric Dental Healthcare our top priority!</p>
+            </div>
+        </div>
+        <div class="card">
+            <div class="box">
+                <i class="fas fa-tooth"></i>
+                <h3>Veneers</h3>
+                <p>If you ever wondered how can you achieve a perfect look of your teeth and a perfect smile</p>
+            </div>
+        </div>
+        <!--        -->
+        <div class="card">
+            <div class="box">
+                <i class="fas fa-user-md"></i>
+                <h3>Periodontics</h3>
+                <p>Periodontal disease affects the gums and tissues in the mouth that hold the teeth in place.</p>
+            </div>
+        </div>
+        <!--        -->
+        <div class="card">
+            <div class="box">
+                <i class="fas fa-stethoscope"></i>
+                <h3>Oral Surgery</h3>
+                <p>The first thing you think about when you have tooth pain is where to find a reliable dentist.</p>
+            </div>
+        </div>
+        <br>
+    </div>
+</div>
+
 </body>
 </html>

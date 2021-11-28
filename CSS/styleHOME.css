@@ -53,6 +53,7 @@ nav ul li a {
     text-decoration: none;
     padding: 7px 20px;
     border-radius: 7px;
+    font-weight:bold;
 }
 a.active,a:hover{
     background: #00cccc;
