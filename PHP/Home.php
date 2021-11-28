@@ -23,8 +23,8 @@
 
     <label class="logo">GOODental</label></span>
     <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">Services</a></li>
+        <li><a href="../PHP/Home.php">Home</a></li>
+        <li><a href="../PHP/Service.php">Services</a></li>
         <li><a href="#">Location</a></li>
         <li><a href="../PHP/Login.php">Sign in</a></li>
     </ul>

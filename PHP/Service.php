@@ -25,8 +25,8 @@
 
     <label class="logo">GOODental</label></span>
     <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">Services</a></li>
+        <li><a href="../PHP/Home.php">Home</a></li>
+        <li><a href="../PHP/Service.php">Services</a></li>
         <li><a href="#">Location</a></li>
         <li><a href="../PHP/Login.php">Sign in</a></li>
     </ul>
@@ -37,46 +37,34 @@
     <div class="content">
         <div class="card">
             <div class="box">
-                <i class="fa fa-paint-brush"></i>
-                <h3>header dev</h3>
-                <p>Video provides a powerful way to help you prove your point. When you click Online Video,
-                    you can paste in the embed code for the video you want to add. You can also type a keyword
-                    to search online for the video that best fits your document.</p>
+                <i class="fas fa-heartbeat"></i>
+                <h3>Children's Dentistry</h3>
+                <p>Here at GOODental Clinic, we make Pediatric Dental Healthcare our top priority!</p>
             </div>
         </div>
-<!--        -->
         <div class="card">
             <div class="box">
-                <i class="fa fa-paint-brush"></i>
-                <h3>header dev</h3>
-                <p>Video provides a powerful way to help you prove your point. When you click Online Video,
-                    you can paste in the embed code for the video you want to add. You can also type a keyword
-                    to search online for the video that best fits your document.</p>
+                <i class="fas fa-tooth"></i>
+                <h3>Veneers</h3>
+                <p>If you ever wondered how can you achieve a perfect look of your teeth and a perfect smile</p>
             </div>
         </div>
         <!--        -->
         <div class="card">
             <div class="box">
-                <i class="fa fa-paint-brush"></i>
-                <h3>header dev</h3>
-                <p>Video provides a powerful way to help you prove your point. When you click Online Video,
-                    you can paste in the embed code for the video you want to add. You can also type a keyword
-                    to search online for the video that best fits your document.</p>
+                <i class="fas fa-user-md"></i>
+                <h3>Periodontics</h3>
+                <p>Periodontal disease affects the gums and tissues in the mouth that hold the teeth in place.</p>
             </div>
         </div>
         <!--        -->
         <div class="card">
             <div class="box">
-                <i class="fa fa-paint-brush"></i>
-                <h3>header dev</h3>
-                <p>Video provides a powerful way to help you prove your point. When you click Online Video,
-                    you can paste in the embed code for the video you want to add. You can also type a keyword
-                    to search online for the video that best fits your document.</p>
+                <i class="fas fa-stethoscope"></i>
+                <h3>Oral Surgery</h3>
+                <p>The first thing you think about when you have tooth pain is where to find a reliable dentist.</p>
             </div>
         </div>
-        <!--        -->
-        <!--        -->
-<!--        -->
     </div>
 </div>
 </body>
