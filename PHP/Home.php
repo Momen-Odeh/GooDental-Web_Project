@@ -23,8 +23,8 @@
 
     <label class="logo">GOODental</label></span>
     <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">Services</a></li>
+        <li><a href="../PHP/Home.php">Home</a></li>
+        <li><a href="../PHP/Service.php">Services</a></li>
         <li><a href="#">Location</a></li>
         <li><a href="../PHP/Login.php">Sign in</a></li>
     </ul>
@@ -114,7 +114,7 @@
                         <div class="innerpic">
                             <div class="infopic">
                                 <h5>Dr.Ayham Qasrawi</h5>
-                                <p>ODental Public Health</p>
+                                <p>Dental Public Health</p>
                                 <div class="social-medea">
                                     <a href="https://www.facebook.com/"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16">
                                             <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z"/>
@@ -180,11 +180,11 @@
                         </div>
                     </div>
                     <div class="item">
-                        <img src="../img/d3.jpg" alt="">
+                        <img src="../img/d6.jpg" alt="">
                         <div class="innerpic">
                             <div class="infopic">
-                                <h5>Dr.Jasmin Raed</h5>
-                                <p>Endodontics</p>
+                                <h5>Dr.Salem Mohammed</h5>
+                                <p>Oral and Maxillofacial Surgery</p>
                                 <div class="social-medea">
                                     <a href="https://www.facebook.com/"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16">
                                             <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z"/>
@@ -203,11 +203,11 @@
                         </div>
                     </div>
                     <div class="item">
-                        <img src="../img/d3.jpg" alt="">
+                        <img src="../img/d11.jpg" alt="">
                         <div class="innerpic">
                             <div class="infopic">
-                                <h5>Dr.Jasmin Raed</h5>
-                                <p>Endodontics</p>
+                                <h5>Dr.Sara Isam</h5>
+                                <p>Prosthodontics</p>
                                 <div class="social-medea">
                                     <a href="https://www.facebook.com/"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16">
                                             <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z"/>
@@ -226,11 +226,11 @@
                         </div>
                     </div>
                     <div class="item">
-                        <img src="../img/d3.jpg" alt="">
+                        <img src="../img/d8.jpg" alt="">
                         <div class="innerpic">
                             <div class="infopic">
-                                <h5>Dr.Jasmin Raed</h5>
-                                <p>Endodontics</p>
+                                <h5>Dr.Sami Shehadeh</h5>
+                                <p>Dental Anesthesiology</p>
                                 <div class="social-medea">
                                     <a href="https://www.facebook.com/"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16">
                                             <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z"/>
@@ -249,11 +249,11 @@
                         </div>
                     </div>
                     <div class="item">
-                        <img src="../img/d3.jpg" alt="">
+                        <img src="../img/d10.jpg" alt="">
                         <div class="innerpic">
                             <div class="infopic">
-                                <h5>Dr.Jasmin Raed</h5>
-                                <p>Endodontics</p>
+                                <h5>Dr.Abla Khatib</h5>
+                                <p>Dental Public Health</p>
                                 <div class="social-medea">
                                     <a href="https://www.facebook.com/"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16">
                                             <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z"/>
