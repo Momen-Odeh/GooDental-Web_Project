@@ -7,7 +7,7 @@
 </head>
 <body>
 
-<img class="cover" src="" id="image">
+<img class="cover" src="../img/boy-brushing1.jpg" id="image">
 
 
 <div class="container">
@@ -31,15 +31,7 @@
 </div>
 <script>
 
-    let image =document.getElementById('image');
-    let images =['../img/boy-brushing1.jpg','../img/DENTIST-600.jpg','../img/difference-between-endodontist-vs-dentist-1.jpg',
-    '../img/nm-kid-dentist-1.jpg']
-    setInterval(function (){
-        let random =Math.floor(Math.random()*4);
-        image.src=images[random];
-    },4000);
 
-</script>
 
 </body>
 </html>
