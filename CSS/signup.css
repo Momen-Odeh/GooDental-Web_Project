@@ -1,0 +1,43 @@
+.cover {
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: -10px;
+    position: fixed;
+
+
+}
+
+.container {
+    margin: 20%;
+    padding-top: -100px;
+     position: fixed;
+    border-radius: 25px;
+    box-shadow: 0 0 100px white ;
+}
+.b{
+    color: white;
+    font-size: 25px;
+    font-family: COCO;
+
+
+}
+
+.header h1 {
+    font-family: COCO;
+    color: white;
+    font-size: 60px;
+
+}
+.main {
+    text-align: center;
+
+}
+.main input, button {
+    border:none;
+    outline: none;
+    font-size: 18px;
+    color: black;
+    margin-bottom: 40px;
+    border-radius: 15px;
+    box-shadow: 0 0 90px #2c3e50 ;
+}
