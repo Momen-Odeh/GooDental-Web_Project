@@ -15,8 +15,8 @@
     </div>
     <div class="main">
         <form>
-            <input class="l1" type="text" placeholder="Username" >
-            <input class="l2" type="password" placeholder="Password" >
+            <input class="l1" type="text" placeholder="Username" required>
+            <input class="l2" type="password" placeholder="Password"  required>
             <button class="b"> Log In</button>
             <div class="signup">  Don't have an account? <span class="sp" onclick="myFunction()">
                     Sign up<span></div>
