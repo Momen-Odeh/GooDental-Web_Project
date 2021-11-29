@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="../CSS/signup.css">
 </head>
 <body>
-
+<div class="GOODental" data-text="GOODental">GOODental</div>
 
 <div class="container">
     <div class="header">
@@ -15,16 +15,18 @@
     <div class="main">
         <form>
 
-            <input  type="text" placeholder="Username" >
-            </br>
-            <input type="Date">
+            <input class="butt" type="text" placeholder="Username" >
+            <input placeholder="Date of Birth" class="butt" type="text"
+                   onfocus="(this.type='date')" id="date"
+                   onblur="(this.type='text')" id="date">
             <br>
 
-            <input name="gender"  type="radio" data-text="Male"><label></label>
-            <input name="gender"  type="radio"><label>Female</label>
+           <input class="sex" name="gender"  type="radio" > Male
+           <input class="sex" name="gender" type="radio">  Female
+
+            <input class="butt" type="number" placeholder="Mobile number" >
+            <input class="butt" type="password" placeholder="Password" >
             <br>
-            <input type="number" placeholder="Mobile number" >
-            <input type="password" placeholder="Password" >
             <button class="b"> Sign Up</button>
         </form>
     </div>
