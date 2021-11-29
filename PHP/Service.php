@@ -39,14 +39,16 @@
             <div class="box">
                 <i class="fas fa-heartbeat"></i>
                 <h3>Children's Dentistry</h3>
-                <p>Here at GOODental Clinic, we make Pediatric Dental Healthcare our top priority!</p>
+                <p>Here at GOODental Clinic, we make
+                    Pediatric Dental Healthcare our top priority!</p>
             </div>
         </div>
         <div class="card">
             <div class="box">
                 <i class="fas fa-tooth"></i>
                 <h3>Veneers</h3>
-                <p>If you ever wondered how can you achieve a perfect look of your teeth and a perfect smile</p>
+                <p>If you ever wondered how can you achieve a
+                    perfect look of your teeth and a perfect smile</p>
             </div>
         </div>
         <!--        -->
@@ -54,7 +56,8 @@
             <div class="box">
                 <i class="fas fa-user-md"></i>
                 <h3>Periodontics</h3>
-                <p>Periodontal disease affects the gums and tissues in the mouth that hold the teeth in place.</p>
+                <p>Periodontal disease affects the gums and
+                    tissues in the mouth that hold the teeth in place.</p>
             </div>
         </div>
         <!--        -->
@@ -62,7 +65,8 @@
             <div class="box">
                 <i class="fas fa-stethoscope"></i>
                 <h3>Oral Surgery</h3>
-                <p>The first thing you think about when you have tooth pain is where to find a reliable dentist.</p>
+                <p>The first thing you think about when you have
+                    tooth pain is where to find a reliable dentist.</p>
             </div>
         </div>
         <br>
@@ -73,31 +77,35 @@
         <div class="card">
             <div class="box">
                 <i class="fas fa-heartbeat"></i>
-                <h3>Children's Dentistry</h3>
-                <p>Here at GOODental Clinic, we make Pediatric Dental Healthcare our top priority!</p>
+                <h3>Teeth whitening</h3>
+                <p> Involves bleaching your teeth to make them lighter.
+                    It can't make your teeth white by several shades.</p>
             </div>
         </div>
         <div class="card">
             <div class="box">
                 <i class="fas fa-tooth"></i>
-                <h3>Veneers</h3>
-                <p>If you ever wondered how can you achieve a perfect look of your teeth and a perfect smile</p>
+                <h3>dental implants</h3>
+                <p>surgical component that interfaces
+                    with the bone of the jaw or skull to support</p>
             </div>
         </div>
         <!--        -->
         <div class="card">
             <div class="box">
                 <i class="fas fa-user-md"></i>
-                <h3>Periodontics</h3>
-                <p>Periodontal disease affects the gums and tissues in the mouth that hold the teeth in place.</p>
+                <h3>gum treatment</h3>
+                <p>After a thorough periodontal evaluation,recommendations
+                    for treatment range to surgical procedures .</p>
             </div>
         </div>
         <!--        -->
         <div class="card">
             <div class="box">
                 <i class="fas fa-stethoscope"></i>
-                <h3>Oral Surgery</h3>
-                <p>The first thing you think about when you have tooth pain is where to find a reliable dentist.</p>
+                <h3>teeth brace</h3>
+                <p>Are devices used in orthodontics that align
+                    aiming to improve dental health. Braces also fix gaps</p>
             </div>
         </div>
         <br>

@@ -21,8 +21,8 @@
                    onblur="(this.type='text')" id="date">
             <br>
 
-           <input class="sex" name="gender"  type="radio" > Male
-           <input class="sex" name="gender" type="radio">  Female
+            <input class="sex" name="gender"  type="radio" ><label class="la">Male</label>
+           <input class="sex" name="gender" type="radio"> <label class="la"> Female </label>
 
             <input class="butt" type="number" placeholder="Mobile number" >
             <input class="butt" type="password" placeholder="Password" >

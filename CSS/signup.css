@@ -3,7 +3,8 @@ body {
     background-repeat: no-repeat;
     margin: 5%;
     padding-right: 58%;
-    background-size: cover;}
+    background-size: cover;
+    }
 
 .container {
 
@@ -49,6 +50,7 @@ body {
     height: 15px;
     margin-left: 30PX;
     color: #2c3e50;
+    cursor:pointer;
 }
 
 .main button{
@@ -63,7 +65,7 @@ body {
     border: none;
     margin-left: 35px;
     margin-top: 25px;
-
+    cursor:pointer;
 }
 
 .main button:hover {
@@ -109,4 +111,7 @@ body {
     0%
     {width: 0px;}
     100%{width: 430px;}
+}
+.la{
+    cursor:pointer;
 }
