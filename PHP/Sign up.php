@@ -42,10 +42,7 @@
             '059-######');}
         function returnPlaceholder() {
             $('#area1').attr('placeholder',
-                'Mobile Number');   }
-
-
+                'Mobile Number');}
 </script>
-
 </body>
 </html>
