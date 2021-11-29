@@ -15,25 +15,37 @@
     <div class="main">
         <form>
 
-            <input class="butt" type="text" placeholder="Username" >
-            <input placeholder="Date of Birth" class="butt" type="text"
+            <input class="butt l1" type="text" placeholder="Username" required >
+            <input placeholder="Date of Birth" class="butt l2" type="text"
                    onfocus="(this.type='date')" id="date"
-                   onblur="(this.type='text')" id="date">
+                   onblur="(this.type='text')" id="date" required >
             <br>
 
-            <input class="sex" name="gender"  type="radio" ><label class="la">Male</label>
+            <input required  class="sex" name="gender"  type="radio" ><label class="la">Male</label>
            <input class="sex" name="gender" type="radio"> <label class="la"> Female </label>
 
-            <input class="butt" type="number" placeholder="Mobile number" >
-            <input class="butt" type="password" placeholder="Password" >
+            <input required id="area1" class="butt l3" type="tel" pattern="059-[0-9]{7}"
+                   placeholder="Mobile Number"
+                   onfocus="changePlaceholder()"
+                   onblur="returnPlaceholder()">
+            <input class="butt l4" type="password" placeholder="Password" required  >
             <br>
+
             <button class="b"> Sign Up</button>
         </form>
     </div>
-
-
 </div>
-<script>
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script type="text/javascript">
+    function changePlaceholder() {
+        $('#area1').attr('placeholder',
+            '059-######');}
+        function returnPlaceholder() {
+            $('#area1').attr('placeholder',
+                'Mobile Number');   }
+
+
+</script>
 
 </body>
 </html>

@@ -38,12 +38,13 @@ body {
     border:none;
     outline: none;
     color:#2c3e50;
-    width: 300px;
+    width: 270px;
     height: 30px;
     font-size: 18px;
     font-family: COCO;
     border-radius: 10px;
     box-shadow: 0px 0px 90px #2c3e50 ;
+    padding-left: 35px;
 }
 .sex{
     width: 15px;
@@ -112,6 +113,35 @@ body {
     {width: 0px;}
     100%{width: 430px;}
 }
-.la{
-    cursor:pointer;
+
+.l1{
+    background-position-y: 5px;
+    background-position-x: 5px;
+    background-image: url("../img/usericon.svg");
+    background-repeat: no-repeat;
+    alignment: center;
+}
+.l2{
+    background-position-y: 3px;
+    background-position-x: 3px;
+    background-image: url("../img/pngwing.png");
+    background-repeat: no-repeat;
+    alignment: center;
+
+}
+
+
+.l3{
+    background-position-y: 5px;
+    background-position-x: 8px;
+    background-image: url("../img/pngwing.com.png");
+    background-repeat: no-repeat;
+    alignment: center;
+
+}
+.l4{
+    background-position-y: 5px;
+    background-position-x: 5px;
+    background-image: url("../img/passwordicon.svg");
+    background-repeat: no-repeat;
 }
