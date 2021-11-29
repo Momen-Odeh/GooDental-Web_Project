@@ -25,7 +25,7 @@
     <ul>
         <li><a href="../PHP/Home.php">Home</a></li>
         <li><a href="../PHP/Service.php">Services</a></li>
-        <li><a href="#">Location</a></li>
+        <li><a href="../PHP/Contact_Location.php">Contact Us</a></li>
         <li><a href="../PHP/Login.php">Sign in</a></li>
     </ul>
 </nav>
