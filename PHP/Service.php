@@ -130,7 +130,9 @@
             <img src="../img/fd.jpg" class="d-block w-100" alt="..."style="height: 100vh">
             <div class="carousel-caption d-none d-md-block">
                 <h5 style="color: black">Sally imad</h5>
-                <p style="color: black">"The best dental care our family has experienced in Palestine. The staff was professional and friendly, we received excellent service and were very happy with the results of the treatment."</p>
+                <p style="color: black">"The best dental care our family has experienced in
+                    Palestine. The staff was professional and friendly, we received
+                    excellent service and were very happy with the results of the treatment."</p>
             </div>
         </div>
         <div class="carousel-item">
@@ -144,7 +146,8 @@
             <img src="../img/iii.jpg" class="d-block w-100" alt="..." style="height: 100vh">
             <div class="carousel-caption d-none d-md-block">
                 <h5 style="color: black">Ali Abd-Alhadi</h5>
-                <p style="color: black">"Highly recommended. Great dentist who over the years has helped save my teeth and improve their health and stability."</p>
+                <p style="color: black">"Highly recommended. Great dentist who over the years has helped
+                    save my teeth and improve their health and stability."</p>
             </div>
         </div>
     </div>

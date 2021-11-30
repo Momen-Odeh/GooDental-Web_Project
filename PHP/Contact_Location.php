@@ -34,7 +34,10 @@
 <div class="spaceofnav"></div>
 <div class="contact-in">
     <div class="contact-map">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3375.119118467623!2d35.2183914151235!3d32.22795898114132!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x151ce1a4057bc2b1%3A0x37cadbaf1603e397!2sAn-Najah%20National%20University!5e0!3m2!1sen!2s!4v1638191188375!5m2!1sen!2s" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3375.
+        119118467623!2d35.2183914151235!3d32.22795898114132!2m3!1f0!2f0!3f0!3m2!1i1024!2i7
+        68!4f13.1!3m3!1m2!1s0x151ce1a4057bc2b1%3A0x37cadbaf1603e397!2sAn-Najah%20National%20Unive
+        rsity!5e0!3m2!1sen!2s!4v1638191188375!5m2!1sen!2s" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
     </div>
     <div class="contact-form">
         <h1>Contact Us</h1>
