@@ -76,7 +76,7 @@
     <div class="content">
         <div class="card">
             <div class="box">
-                <i class="fas fa-heartbeat"></i>
+                <i class="fas fa-notes-medical"></i>
                 <h3>Teeth whitening</h3>
                 <p> Involves bleaching your teeth to make them lighter.
                     It can't make your teeth white by several shades.</p>
@@ -84,7 +84,7 @@
         </div>
         <div class="card">
             <div class="box">
-                <i class="fas fa-tooth"></i>
+                <i class="fas fa-hand-holding-medical"></i>
                 <h3>dental implants</h3>
                 <p>surgical component that interfaces
                     with the bone of the jaw or skull to support</p>
@@ -93,7 +93,7 @@
         <!--        -->
         <div class="card">
             <div class="box">
-                <i class="fas fa-user-md"></i>
+                <i class="fas fa-crutch"></i>
                 <h3>gum treatment</h3>
                 <p>After a thorough periodontal evaluation,recommendations
                     for treatment range to surgical procedures .</p>
@@ -102,7 +102,7 @@
         <!--        -->
         <div class="card">
             <div class="box">
-                <i class="fas fa-stethoscope"></i>
+                <i class="fas fa-vial"></i>
                 <h3>teeth brace</h3>
                 <p>Are devices used in orthodontics that align
                     aiming to improve dental health. Braces also fix gaps</p>
@@ -111,6 +111,51 @@
         <br>
     </div>
 </div>
-
+<!--<div class="quote">-->
+<!--    <div class="container">-->
+<!--        <q>-->
+<!--            The best dental care our family has experienced in Palestine. The staff was professional and friendly, we received excellent service and were very happy with the results of the treatment.-->
+<!--        </q>-->
+<!--        <span>Mahmoud Shami</span>-->
+<!--    </div>-->
+<!--</div>-->
+<div id="carouselExampleCaptions" class="carousel slide sss" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+            <img src="../img/fd.jpg" class="d-block w-100" alt="..."style="height: 100vh">
+            <div class="carousel-caption d-none d-md-block">
+                <h5 style="color: black">Sally imad</h5>
+                <p style="color: black">"The best dental care our family has experienced in Palestine. The staff was professional and friendly, we received excellent service and were very happy with the results of the treatment."</p>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <img src="../img/i.jpg" class="d-block w-100" alt="..."style="height: 100vh">
+            <div class="carousel-caption d-none d-md-block">
+                <h5 style="color: black">Haya Samer</h5>
+                <p style="color: black">"The best dentist one can possibly get. Also a great person."</p>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <img src="../img/iii.jpg" class="d-block w-100" alt="..." style="height: 100vh">
+            <div class="carousel-caption d-none d-md-block">
+                <h5 style="color: black">Ali Abd-Alhadi</h5>
+                <p style="color: black">"Highly recommended. Great dentist who over the years has helped save my teeth and improve their health and stability."</p>
+            </div>
+        </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+    </button>
+</div>
 </body>
 </html>
