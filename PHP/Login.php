@@ -10,6 +10,7 @@ if(isset($_POST["Username"]) && isset($_POST["Password"]))
     $user=$_POST["Username"];
     $password=$_POST["Password"];
     try {
+//        Admain
         $db=new mysqli('localhost','root','','goodental');
         $qrystr="select * from admain";
         $res=$db->query($qrystr);
@@ -19,6 +20,53 @@ if(isset($_POST["Username"]) && isset($_POST["Password"]))
             if( ($row['UserName'] == $user) && ($row['Password'] == sha1($password))) {
                 $_SESSION['Is_Member']=1;
                 $_SESSION['UserName']=$user;
+                header('location:ProfileAdmain.php');
+            }
+            else{
+                $_SESSION['tmp']=1;
+            }
+
+        }
+        $db->close();
+//        endAdmain
+//        Doctor
+        $db=new mysqli('localhost','root','','goodental');
+        $qrystr="select * from doctor";
+        $res=$db->query($qrystr);
+        for($i=0;$i<$res->num_rows;$i++)
+        {
+            $row=$res->fetch_assoc();
+            if( ($row['UserName'] == $user) && ($row['Password'] == sha1($password))) {
+                $_SESSION['Is_Member']=1;
+                $_SESSION['UserName']=$user;
+                header('location:ProfileDr.php');
+            }
+            else{
+                $_SESSION['tmp']=1;
+            }
+
+        }
+        $db->close();
+//        endDoctor
+//        Patient
+        $db=new mysqli('localhost','root','','goodental');
+        $qrystr="select * from patient";
+        $res=$db->query($qrystr);
+        for($i=0;$i<$res->num_rows;$i++)
+        {
+            $row=$res->fetch_assoc();
+            if( ($row['UserName'] == $user) && ($row['Password'] == sha1($password))) {
+                $_SESSION['Is_Member']=1;
+                $_SESSION['UserName']=$user;
+                $_SESSION['BirthDate']=$row['BirthDate'];
+                $_SESSION['Gender']=$row['Gender'];
+                $_SESSION['MobilePhone']=$row['MobilePhone'];
+                $_SESSION['Password']=$row['Password'];
+                $_SESSION['BloodGroup']=$row['BloodGroup'];
+                $parts = explode('-', $_SESSION['BirthDate']);
+                echo $parts[0];
+                $_SESSION['Age']=date("Y")-$parts[0];
+                $_SESSION['address']=$row['address'];
                 header('location:Profile.php');
             }
             else{
@@ -27,6 +75,7 @@ if(isset($_POST["Username"]) && isset($_POST["Password"]))
 
         }
         $db->close();
+//        endPatient
     }
     catch (Exception $E)
     {

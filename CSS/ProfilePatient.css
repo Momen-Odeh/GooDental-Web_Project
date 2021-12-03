@@ -1,0 +1,25 @@
+.btt1{
+    float: right;
+}
+.icc{
+    float: right
+}
+
+.fo{
+    margin-right: 2%;
+    float: right;
+    visibility: hidden;
+}
+.txt1{
+    background-color: lightgray;
+    color: white;
+    font-weight: 600;
+    border-radius: 7px;
+    padding: 1px;
+}
+.subb{
+border-radius: 10px;
+    background-color: #00cccc;
+    padding: 2px;
+    color: #2c3e50;
+}

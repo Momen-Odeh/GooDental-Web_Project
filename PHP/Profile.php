@@ -1,4 +1,5 @@
 <?php
+//initialization
 session_start();
 if(!isset($_SESSION['Is_Member']))
 {
@@ -8,6 +9,36 @@ if($_SESSION['Is_Member']==0)
 {
   header('location:login.php');
 }
+$UserName=$_SESSION['UserName'];
+$BirthDate=$_SESSION['BirthDate'];
+$Gender=$_SESSION['Gender'];
+$MobilePhone=$_SESSION['MobilePhone'];
+$Password=$_SESSION['Password'];
+$BloodGroup=$_SESSION['BloodGroup'];
+$Age=$_SESSION['Age'];
+$address=$_SESSION['address'];
+//End initialization
+//Update
+if(isset($_POST['text1']))
+{
+    try {////////////////////////////////////////////////////////
+        $old=$UserName;
+        $_SESSION['UserName']=$_POST['text1'];
+        $UserName=$_SESSION['UserName'];
+        $db = new mysqli('localhost', 'root', '', 'goodental');
+        echo "$UserName   $old ";
+        $qrystr = "UPDATE `patient` SET `UserName` = '.$UserName.' WHERE `UserName` = '.$old.';";
+        $res = $db->query($qrystr);
+        echo "   $res";
+        $db->commit();
+        $db->close();
+    }
+    catch (Exception $ex)
+    {
+        echo "dddddddddddd";
+    }
+}
+//
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -21,8 +52,10 @@ if($_SESSION['Is_Member']==0)
     <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="../CSS/Profile.css">
+    <link rel="stylesheet" href="../CSS/ProfilePatient.css">
 </head>
 <body>
+
 <nav>
     <!--  for munebar  -->
     <input type="checkbox" id="check">
@@ -65,28 +98,102 @@ if($_SESSION['Is_Member']==0)
                 <div class="card-body">
                     <div class="row">
                         <div class="col-md-3">
-                            <h5>Full Name</h5>
+                            <h5>User Name</h5>
                         </div>
                         <div class="col-md-9 text-secondary">
-                        Momen Odeh
+                            <script type="text/javascript">
+                                let x1=1;
+                                function clic1()
+                                {
+                                    if(x1==1) {
+                                        document.getElementById("form1").style.visibility = 'visible';
+                                        x1=0;
+                                    }
+                                    else if (x1==0){
+                                        document.getElementById("form1").style.visibility = 'hidden';
+                                        x1=1;
+                                    }
+                                }
+                            </script>
+                            
+                            <?php
+                            echo "$UserName";
+                            ?>
+<!--                            -->
+                            <button  onclick="clic1()" class="btn btt1" type="button"><i class="fas fa-edit icc"></i></button>
+                            <form class="fo" id="form1" action="Profile.php" method="post">
+<!--                                <span>Enter new User name</span>-->
+                                <input type="text" name="text1" class="txt1" placeholder="Enter new User name">
+                                <input type="submit" class="subb" value="Update">
+                            </form>
+
+<!--                            -->
                         </div>
                     </div>
                     <hr>
                     <div class="row">
                         <div class="col-md-3">
-                            <h5>Email</h5>
+                            <h5>Birth Date</h5>
                         </div>
                         <div class="col-md-9 text-secondary">
-                            Momen.odeh74@gmail.com
+                            <?php
+                            echo "$BirthDate";
+                            ?>
                         </div>
                     </div>
                     <hr>
                     <div class="row">
                         <div class="col-md-3">
-                            <h5>Phone</h5>
+                            <h5>Gender</h5>
                         </div>
                         <div class="col-md-9 text-secondary">
-                            0597627566
+                            <?php
+                            echo "$Gender";
+                            ?>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="row">
+                        <div class="col-md-3">
+                            <h5>Mobile Phone</h5>
+                        </div>
+                        <div class="col-md-9 text-secondary">
+                            <?php
+                            echo "$MobilePhone";
+                            ?>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="row">
+                        <div class="col-md-3">
+                            <h5>Password</h5>
+                        </div>
+                        <div class="col-md-9 text-secondary">
+                            <?php
+                            echo "**********";
+                            ?>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="row">
+                        <div class="col-md-3">
+                            <h5>Blood group</h5>
+                        </div>
+                        <div class="col-md-9 text-secondary">
+                            <?php
+                            echo "$BloodGroup";
+                            ?>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="row">
+                        <div class="col-md-3">
+                            <h5>Age</h5>
+                        </div>
+                        <div class="col-md-9 text-secondary">
+                            <?php
+                            echo "$Age";
+                            ?>
                         </div>
                     </div>
                     <hr>
@@ -95,7 +202,9 @@ if($_SESSION['Is_Member']==0)
                             <h5>Address</h5>
                         </div>
                         <div class="col-md-9 text-secondary">
-                            Palstine-Nablus
+                            <?php
+                            echo "$address";
+                            ?>
                         </div>
                     </div>
                     <hr>
