@@ -1,3 +1,10 @@
+<?php
+session_start();
+if(!isset($_SESSION['Is_Member']))
+{
+    $_SESSION['Is_Member']=0;
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -26,7 +33,15 @@
         <li><a href="../PHP/Home.php">Home</a></li>
         <li><a href="../PHP/Service.php">Services</a></li>
         <li><a href="../PHP/Contact_Location.php">Contact Us</a></li>
-        <li><a href="../PHP/Login.php">Sign in</a></li>
+        <?php
+        if($_SESSION['Is_Member']==1)
+        {
+            echo "<li><a href="."../PHP/Profile.php".">Profile</a></li>";
+        }
+        else{
+            echo "<li><a href="."../PHP/Login.php".">Sign in</a></li>";
+        }
+        ?>
     </ul>
 </nav>
 <div class="spaceofnav"></div>

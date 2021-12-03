@@ -1,3 +1,14 @@
+<?php
+session_start();
+if(!isset($_SESSION['Is_Member']))
+{
+    $_SESSION['Is_Member']=0;
+}
+if($_SESSION['Is_Member']==0)
+{
+  header('location:login.php');
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,7 +21,6 @@
     <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="../CSS/Profile.css">
-
 </head>
 <body>
 <nav>
@@ -28,7 +38,7 @@
         <li><a href="../PHP/Home.php">Home</a></li>
         <li><a href="../PHP/Service.php">Services</a></li>
         <li><a href="../PHP/Contact_Location.php">Contact Us</a></li>
-        <li><a href="../PHP/Login.php">Sign in</a></li>
+        <li><a href="../PHP/Profile.php">Profile</a></li>
     </ul>
 </nav>
 <div class="spaceofnav"></div>
@@ -44,7 +54,7 @@
                         <a href="../PHP/Home.php">Home</a>
                         <a href="../PHP/Service.php">Services</a>
                         <a href="../PHP/Contact_Location.php">Contact Us</a>
-                        <a href="../PHP/Home.php">Sign out</a>
+                        <a href="../PHP/Logout.php">Sign out</a>
                     </div>
                 </div>
             </div>
@@ -100,6 +110,17 @@
                         </div>
                         <div class="col-md-9 text-secondary">
                             Project Description
+<!--                            <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">Toggle right offcanvas</button>-->
+<!---->
+<!--                            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">-->
+<!--                                <div class="offcanvas-header">-->
+<!--                                    <h5 id="offcanvasRightLabel">Offcanvas right</h5>-->
+<!--                                    <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>-->
+<!--                                </div>-->
+<!--                                <div class="offcanvas-body">-->
+<!--                                    ...-->
+<!--                                </div>-->
+<!--                            </div>-->
                         </div>
                     </div>
                 </div>
