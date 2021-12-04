@@ -62,8 +62,10 @@ if(isset($_POST["Username"]) && isset($_POST["BD"]) && isset($_POST["gender"]) &
             $_SESSION['tmp']=1;
         }
         else{
+            $partsw = explode('-', $bd);
+            $ag=date("Y")-$partsw[0];
             $db = new mysqli('localhost', 'root', '', 'goodental');
-            $qrystr = "INSERT INTO `patient` (`UserName`, `BirthDate`, `Gender`, `MobilePhone`, `Password`, `BloodGroup`, `Age`, `address`) VALUES ('$user', '$bd', '$gender', '$phone', SHA1('$password'), NULL, NULL, NULL);";
+            $qrystr = "INSERT INTO `patient` (`UserName`, `BirthDate`, `Gender`, `MobilePhone`, `Password`, `BloodGroup`, `Age`, `address`) VALUES ('$user', '$bd', '$gender', '$phone', SHA1('$password'), NULL, $ag, NULL);";
             $res = $db->query($qrystr);
             $db->commit();
             $db->close();
