@@ -20,6 +20,15 @@ if(isset($_POST["Username"]) && isset($_POST["Password"]))
             if( ($row['UserName'] == $user) && ($row['Password'] == sha1($password))) {
                 $_SESSION['Is_Member']=1;
                 $_SESSION['UserName']=$user;
+                $_SESSION['BirthDate']=$row['BirthDate'];
+                $_SESSION['Gender']=$row['Gender'];
+                $_SESSION['MobilePhone']=$row['MobilePhone'];
+                $_SESSION['Password']=$row['Password'];
+                $_SESSION['BloodGroup']=$row['BloodGroup'];
+                $parts = explode('-', $_SESSION['BirthDate']);
+                echo $parts[0];
+                $_SESSION['Age']=date("Y")-$parts[0];
+                $_SESSION['address']=$row['address'];
                 header('location:ProfileAdmain.php');
             }
             else{
@@ -39,6 +48,19 @@ if(isset($_POST["Username"]) && isset($_POST["Password"]))
             if( ($row['UserName'] == $user) && ($row['Password'] == sha1($password))) {
                 $_SESSION['Is_Member']=1;
                 $_SESSION['UserName']=$user;
+                $_SESSION['BirthDate']=$row['BirthDate'];
+                $_SESSION['Gender']=$row['Gender'];
+                $_SESSION['MobilePhone']=$row['MobilePhone'];
+                $_SESSION['Password']=$row['Password'];
+                $_SESSION['Specialization']=$row['Specialization'];
+                $_SESSION['StartTime']=$row['StartTime'];
+                $_SESSION['EndTime']=$row['EndTime'];
+                $_SESSION['Thursday']=$row['Thursday'];
+                $_SESSION['Wednesday']=$row['Wednesday'];
+                $_SESSION['Tuesday']=$row['Tuesday'];
+                $_SESSION['Monday']=$row['Monday'];
+                $_SESSION['Sunday']=$row['Sunday'];
+                $_SESSION['Saturday']=$row['Saturday'];
                 header('location:ProfileDr.php');
             }
             else{

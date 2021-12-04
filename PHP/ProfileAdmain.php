@@ -1,13 +1,13 @@
 <?php
-session_start();
-if(!isset($_SESSION['Is_Member']))
-{
-    $_SESSION['Is_Member']=0;
-}
-if($_SESSION['Is_Member']==0)
-{
-    header('location:login.php');
-}
+//session_start();
+//if(!isset($_SESSION['Is_Member']))
+//{
+//    $_SESSION['Is_Member']=0;
+//}
+//if($_SESSION['Is_Member']==0)
+//{
+//    header('location:login.php');
+//}
 ?>
 <!DOCTYPE html>
 <html lang="en">

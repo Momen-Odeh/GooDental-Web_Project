@@ -221,7 +221,9 @@ if(isset($_POST['appointdate']) && isset($_POST['DescriptTxt']))
         $des = $_POST['DescriptTxt'];
 //    echo "$drp";
         $db = new mysqli('localhost', 'root', '', 'goodental');
-        $qrystr = "INSERT INTO `recoversession` (`DoctorName`, `PatientName`, `Date`, `PerioudTime`, `State`, `Description`) VALUES ('$drp', '$UserName', '$da', NULL, NULL, '$des');";
+
+//        $qrystr = "INSERT INTO `recoversession` (`DoctorName`, `PatientName`, `Date`, `PerioudTime`, `State`, `Description`) VALUES ('$drp', '$UserName', '$da', NULL, NULL, '$des');";
+        $qrystr = "INSERT INTO `recoversession` (`DoctorName`, `PatientName`, `Date`, `StartTime`, `EndTime`, `State`, `Description`) VALUES ('$drp', '$UserName', '$da', NULL, NULL, 'On Wait', '$des');";
         $res = $db->query($qrystr);
         $db->commit();
         $db->close();
@@ -272,7 +274,7 @@ if(isset($_POST['appointdate']) && isset($_POST['DescriptTxt']))
         <div class="col-md-4 mt-1">
             <div class="card text-center sidebar">
                 <div class="card-body">
-                    <img src="../img/d8.jpg" class="rounded-circle" width="150" alt="">
+                    <img src="../img/pro1.png" class="rounded-circle" width="150" alt="">
                     <div class="mt-3">
                         <h3><?php
                             echo "$UserName";
@@ -529,10 +531,11 @@ if(isset($_POST['appointdate']) && isset($_POST['DescriptTxt']))
                         <div class="col-md-12">
                             <table class="content-table" width="100%">
                                 <thead>
-                                    <th width="20%">Doctor Name</th>
+                                    <th width="15%">Doctor Name</th>
                                     <th width="20%">Date</th>
-                                    <th width="20%">Perioud Time</th>
-                                    <th width="20%">State</th>
+                                    <th width="15%">Start Time</th>
+                                    <th width="15%">End Time</th>
+                                    <th width="15%">State</th>
                                     <th width="20%">Description</th>
                                 </thead>
                                 <tbody>
@@ -549,6 +552,7 @@ if(isset($_POST['appointdate']) && isset($_POST['DescriptTxt']))
                                         echo "<td>$row[3]</td>";
                                         echo "<td>$row[4]</td>";
                                         echo "<td>$row[5]</td>";
+                                        echo "<td>$row[6]</td>";
                                         echo "</tr>";
                                 }
                                 $db->close();
