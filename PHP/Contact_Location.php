@@ -4,6 +4,18 @@ if(!isset($_SESSION['Is_Member']))
 {
     $_SESSION['Is_Member']=0;
 }
+if(isset($_POST['txt1']) && isset($_POST['txt2']) && isset($_POST['txt3']))
+{
+    $t1=$_POST['txt1'];
+    $t2=$_POST['txt2'];
+    $t3=$_POST['txt3'];
+    $db = new mysqli('localhost', 'root', '', 'goodental');
+    $qrystr = "INSERT INTO `contactus` (`NUM`, `Name`, `Email`, `Message`) VALUES (NULL, '$t1', '$t2', '$t3');";
+    $res = $db->query($qrystr);
+    $db->commit();
+    $db->commit();
+    $db->close();
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -56,10 +68,10 @@ if(!isset($_SESSION['Is_Member']))
     </div>
     <div class="contact-form">
         <h1>Contact Us</h1>
-        <form action="">
-            <input type="text" placeholder="Name" class="contact-form-txt">
-            <input type="text" placeholder="Email" class="contact-form-txt">
-            <textarea placeholder="Message" class="contact-form-txtarea"></textarea>
+        <form action="Contact_Location.php" method="post">
+            <input type="text" name="txt1" placeholder="Name" class="contact-form-txt">
+            <input type="text" name="txt2" placeholder="Email" class="contact-form-txt">
+            <textarea name="txt3" placeholder="Message" class="contact-form-txtarea"></textarea>
             <input type="submit" name="Submit" class="contact-form-btn">
         </form>
     </div>

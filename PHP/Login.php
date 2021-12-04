@@ -24,11 +24,6 @@ if(isset($_POST["Username"]) && isset($_POST["Password"]))
                 $_SESSION['Gender']=$row['Gender'];
                 $_SESSION['MobilePhone']=$row['MobilePhone'];
                 $_SESSION['Password']=$row['Password'];
-                $_SESSION['BloodGroup']=$row['BloodGroup'];
-                $parts = explode('-', $_SESSION['BirthDate']);
-                echo $parts[0];
-                $_SESSION['Age']=date("Y")-$parts[0];
-                $_SESSION['address']=$row['address'];
                 header('location:ProfileAdmain.php');
             }
             else{
