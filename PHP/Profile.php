@@ -210,9 +210,24 @@ elseif(isset($_POST['text8']))
 }
 //
 ///////////////////add new appointment
-if(isset($_POST['DrNamelist']) && isset($_POST['appointdate']) && isset($_POST['DescriptTxt']))
+///
+
+if(isset($_POST['appointdate']) && isset($_POST['DescriptTxt']))
 {
 
+    try {
+        $drp = $_POST['namedr'];
+        $da = $_POST['appointdate'];
+        $des = $_POST['DescriptTxt'];
+//    echo "$drp";
+        $db = new mysqli('localhost', 'root', '', 'goodental');
+        $qrystr = "INSERT INTO `recoversession` (`DoctorName`, `PatientName`, `Date`, `PerioudTime`, `State`, `Description`) VALUES ('$drp', '$UserName', '$da', NULL, NULL, '$des');";
+        $res = $db->query($qrystr);
+        $db->commit();
+        $db->close();
+    }catch (Exception $e){
+
+    }
 }
 ///
 ?>
@@ -514,11 +529,10 @@ if(isset($_POST['DrNamelist']) && isset($_POST['appointdate']) && isset($_POST['
                         <div class="col-md-12">
                             <table class="content-table" width="100%">
                                 <thead>
-                                    <th width="15%">Doctor Name</th>
-                                    <th width="15%">Patient Name</th>
+                                    <th width="20%">Doctor Name</th>
                                     <th width="20%">Date</th>
-                                    <th width="15%">Perioud Time</th>
-                                    <th width="15%">State</th>
+                                    <th width="20%">Perioud Time</th>
+                                    <th width="20%">State</th>
                                     <th width="20%">Description</th>
                                 </thead>
                                 <tbody>
@@ -531,10 +545,10 @@ if(isset($_POST['DrNamelist']) && isset($_POST['appointdate']) && isset($_POST['
                                     $row=$res->fetch_row();
                                         echo "<tr>";
                                         echo "<td>$row[0]</td>";
-                                        echo "<td>$row[1]</td>";
                                         echo "<td>$row[2]</td>";
                                         echo "<td>$row[3]</td>";
                                         echo "<td>$row[4]</td>";
+                                        echo "<td>$row[5]</td>";
                                         echo "</tr>";
                                 }
                                 $db->close();
@@ -564,14 +578,22 @@ if(isset($_POST['DrNamelist']) && isset($_POST['appointdate']) && isset($_POST['
                                 <tbody>
                                 <tr>
                                     <form action="Profile.php" method="post">
-                                        <td><select name="" id="" size="1" name="DrNamelist" class="DrNamelist" required>
-                                                <option value="Ahmad">Ahmad</option>
-                                                <option value="ali">ali</option>
-                                                <option value="hadi">hadi</option>
+                                        <td>
+                                            <select size="1" name="namedr" class="DrNamelist" required>
+                                                <?php
+                                                $db = new mysqli('localhost', 'root', '', 'goodental');
+                                                $qrystr = "select * from doctor";
+                                                $res = $db->query($qrystr);
+                                                for ($i = 0; $i < $res->num_rows; $i++) {
+                                                    $row = $res->fetch_row();
+                                                    echo"<option value=".$row[0].">$row[0]</option>";
+                                                }
+                                                $db->close();
+                                                ?>
                                             </select>
                                         </td>
                                         <td>
-                                            <input type="datetime-local" class="appointdate" name="appointdate" required>
+                                            <input type="date" class="appointdate" name="appointdate" required>
                                         </td>
                                         <td>
                                             <input type="text"name="DescriptTxt" class="DescriptTxt" required>
@@ -579,29 +601,16 @@ if(isset($_POST['DrNamelist']) && isset($_POST['appointdate']) && isset($_POST['
                                         <td><input type="submit" class="Add_appointment" value="Add appointment"></td>
                                     </form>
                                 </tr>
-<!--                                --><?php
-//                                $db=new mysqli('localhost','root','','goodental');
-//                                $qrystr="SELECT * FROM `recoversession` WHERE `PatientName`='$UserName';";
-//                                $res=$db->query($qrystr);
-//                                for($i=0;$i<$res->num_rows;$i++)
-//                                {
-//                                    $row=$res->fetch_row();
-//                                    echo "<tr>";
-//                                    echo "<td>$row[0]</td>";
-//                                    echo "<td>$row[1]</td>";
-//                                    echo "<td>$row[2]</td>";
-//                                    echo "<td>$row[3]</td>";
-//                                    echo "<td>$row[4]</td>";
-//                                    echo "</tr>";
-//                                }
-//                                $db->close();
-//                                ?>
                                 </tbody>
                             </table>
                         </div>
-                        <div class="col-md-12"
-<!--                             if text for addition operator-->
-                        </div>
+                        <?php
+//                        if($er==1)
+//                        {
+//                           echo "<div class='col-md-12' name='errorAdd'>if text for addition operator</div>";
+//                        }
+                        ?>
+
                     </div>
                 </div>
             </div>
