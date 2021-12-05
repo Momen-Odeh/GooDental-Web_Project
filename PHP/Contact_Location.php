@@ -50,7 +50,18 @@ if(isset($_POST['txt1']) && isset($_POST['txt2']) && isset($_POST['txt3']))
         <?php
         if($_SESSION['Is_Member']==1)
         {
-            echo "<li><a href="."../PHP/Profile.php".">Profile</a></li>";
+            if($_SESSION['Member_level']==1)
+            {
+                echo "<li><a href="."../PHP/Profile.php".">Profile</a></li>";
+            }
+            elseif ($_SESSION['Member_level']==2)
+            {
+                echo "<li><a href="."../PHP/ProfileDr.php".">Profile</a></li>";
+            }
+            elseif ($_SESSION['Member_level'])
+            {
+                echo "<li><a href="."../PHP/ProfileAdmain.php".">Profile</a></li>";
+            }
         }
         else{
             echo "<li><a href="."../PHP/Login.php".">Sign in</a></li>";

@@ -19,6 +19,7 @@ if(isset($_POST["Username"]) && isset($_POST["Password"]))
             $row=$res->fetch_assoc();
             if( ($row['UserName'] == $user) && ($row['Password'] == sha1($password))) {
                 $_SESSION['Is_Member']=1;
+                $_SESSION['Member_level']=3;
                 $_SESSION['UserName']=$user;
                 $_SESSION['BirthDate']=$row['BirthDate'];
                 $_SESSION['Gender']=$row['Gender'];
@@ -42,6 +43,7 @@ if(isset($_POST["Username"]) && isset($_POST["Password"]))
             $row=$res->fetch_assoc();
             if( ($row['UserName'] == $user) && ($row['Password'] == sha1($password))) {
                 $_SESSION['Is_Member']=1;
+                $_SESSION['Member_level']=2;
                 $_SESSION['UserName']=$user;
                 $_SESSION['BirthDate']=$row['BirthDate'];
                 $_SESSION['Gender']=$row['Gender'];
@@ -74,6 +76,7 @@ if(isset($_POST["Username"]) && isset($_POST["Password"]))
             $row=$res->fetch_assoc();
             if( ($row['UserName'] == $user) && ($row['Password'] == sha1($password))) {
                 $_SESSION['Is_Member']=1;
+                $_SESSION['Member_level']=1;
                 $_SESSION['UserName']=$user;
                 $_SESSION['BirthDate']=$row['BirthDate'];
                 $_SESSION['Gender']=$row['Gender'];

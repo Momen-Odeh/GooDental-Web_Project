@@ -8,6 +8,16 @@ if($_SESSION['Is_Member']==0)
 {
     header('location:login.php');
 }
+else{
+    if($_SESSION['Member_level']==1)
+    {
+        header('location:Profile.php');
+    }
+    elseif ($_SESSION['Member_level']==2)
+    {
+        header('location:ProfileDr.php');
+    }
+}
 $UserName=$_SESSION['UserName'];
 $BirthDate=$_SESSION['BirthDate'];
 $Gender=$_SESSION['Gender'];
@@ -15,6 +25,7 @@ $MobilePhone=$_SESSION['MobilePhone'];
 $Password=$_SESSION['Password'];
 //
 $_SESSION['tmp']=0;
+$_SESSION['Drnameexit']=0;
 $found=0;
 if(isset($_POST['text1']))
 {
@@ -160,6 +171,120 @@ elseif(isset($_POST['text5']))
 }
 
 //
+//add doctor code
+
+if(isset($_POST["Userdr"]) && isset($_POST["BDdr"]) && isset($_POST["genderdr"]) && isset($_POST["phonedr"]) && isset($_POST["passworddr"]) )
+{
+    $Userdr=$_POST['Userdr'];
+    $BDdr=$_POST['BDdr'];
+    $genderdr=$_POST['genderdr'];
+    $phonedr=$_POST['phonedr'];
+    $passworddr=$_POST['passworddr'];
+    $special=$_POST['special'];
+    $startdr=$_POST['startdr'];
+    $enddr=$_POST['enddr'];
+    if(isset($_POST['Saturday'])){
+        $Saturday=1;
+    }
+    else{
+        $Saturday=0;
+    }
+    if(isset($_POST['Sunday'])){
+        $Sunday=1;
+    }
+    else{
+        $Sunday=0;
+    }
+    if(isset($_POST['Monday'])){
+        $Monday=1;
+    }
+    else{
+        $Monday=0;
+    }
+    if(isset($_POST['Tuesday'])){
+        $Tuesday=1;
+    }
+    else{
+        $Tuesday=0;
+    }
+    if(isset($_POST['Wednesday'])){
+        $Wednesday=1;
+    }
+    else{
+        $Wednesday=0;
+    }
+    if(isset($_POST['Thursday'])){
+        $Thursday=1;
+    }
+    else{
+        $Thursday=0;
+    }
+//    $Userdr=$_POST['Userdr'];
+    try {
+        //Admain
+        $db=new mysqli('localhost','root','','goodental');
+        $qrystr="select * from admain";
+        $res=$db->query($qrystr);
+        for($i=0;$i<$res->num_rows;$i++)
+        {
+            $row=$res->fetch_assoc();
+            if( ($row['UserName'] == $_POST['Userdr'])) {
+                $found=1;
+                break;
+            }
+
+        }
+        $db->close();
+//        endAdmain
+//        Doctor
+        if($found==0) {
+            $db = new mysqli('localhost', 'root', '', 'goodental');
+            $qrystr = "select * from doctor";
+            $res = $db->query($qrystr);
+            for ($i = 0; $i < $res->num_rows; $i++) {
+                $row = $res->fetch_assoc();
+                if (($row['UserName'] == $_POST['Userdr'])) {
+                    $found = 1;
+                    break;
+                }
+
+            }
+            $db->close();
+        }
+//        endDoctor
+//        Patient
+        if($found==0) {
+            $db = new mysqli('localhost', 'root', '', 'goodental');
+            $qrystr = "select * from patient";
+            $res = $db->query($qrystr);
+            for ($i = 0; $i < $res->num_rows; $i++) {
+                $row = $res->fetch_assoc();
+                if (($row['UserName'] == $_POST['Userdr'])) {
+                    $found = 1;
+                    break;
+                }
+            }
+            $db->close();
+        }
+//        endPatient
+        if($found==1)
+        {
+            $_SESSION['Drnameexit']=1;
+        }
+        else{
+
+            $db = new mysqli('localhost', 'root', '', 'goodental');
+            $qrystr = "INSERT INTO `doctor` (`UserName`, `BirthDate`, `Gender`, `MobilePhone`, `Password`, `Specialization`, `StartTime`, `EndTime`, `Saturday`, `Sunday`, `Monday`, `Tuesday`, `Wednesday`, `Thursday`) VALUES ('$Userdr', '$BDdr', '$genderdr', '$phonedr', SHA1('$passworddr'), '$special', '$startdr', '$enddr', '$Saturday', '$Sunday', '$Monday', '$Tuesday', '$Wednesday', '$Thursday');";
+            $res = $db->query($qrystr);
+            $db->commit();
+            $db->close();
+        }
+    }
+    catch (Exception $ex)
+    {
+
+    }
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -191,7 +316,7 @@ elseif(isset($_POST['text5']))
         <li><a href="../PHP/Home.php">Home</a></li>
         <li><a href="../PHP/Service.php">Services</a></li>
         <li><a href="../PHP/Contact_Location.php">Contact Us</a></li>
-        <li><a href="../PHP/Profile.php">Profile</a></li>
+        <li><a href="../PHP/ProfileAdmain.php">Profile</a></li>
     </ul>
 </nav>
 <div class="spaceofnav"></div>
@@ -207,11 +332,11 @@ elseif(isset($_POST['text5']))
                                 echo "$UserName";
                                 ?></h3>
 <!--                            ///////////////////////////////////////////////////////////////////////////////////////////////////////////////-->
-                            <a href="../PHP/Service.php">Add Doctor</a>
+                            <a href="#row4" onclick="clickRow7()">Add Doctor</a>
                             <a href="../PHP/Service.php">Order Processing</a>
                             <a href="#row2" onclick="clickRow3()">Show all Patient</a>
                             <a href="#row1" onclick="clickRow1()">Show all Doctor</a>
-                            <a href="#row2" onclick="clickRow5()">Contact US Messages</a>
+                            <a href="#row3" onclick="clickRow5()">Contact US Messages</a>
                             <a href="../PHP/Logout.php">Sign out</a>
 <!--                            ///////////////////////////////////////////////////////////////////////////////////////////////////////////////-->
                         </div>
@@ -408,10 +533,18 @@ elseif(isset($_POST['text5']))
                     {
                         document.getElementById("row3").style.display = 'none';
                     }
+                    function clickRow7()
+                    {
+                        document.getElementById("row4").style.display = 'block';
+                    }
+                    function clickRow8()
+                    {
+                        document.getElementById("row4").style.display = 'none';
+                    }
                 </script>
 <!--                -->
                 <div class="card mb-3 content">
-                    <h1 class="m-3">Information</h1>
+                    <h1 class="m-3">Management</h1>
                     <div class="card-body">
 <!--                        -->
                         <div class="row" id="row1" style="display:none;">
@@ -548,6 +681,120 @@ elseif(isset($_POST['text5']))
                                     ?>
                                     </tbody>
                                 </table>
+                            </div>
+                        </div>
+                        <!--                        -->
+                        <!--                        -->
+                        <script type="text/javascript">
+                            function cll(){
+                                document.getElementById("momp").style.display='none';
+                            }
+                        </script>
+                        <?php
+                        if($_SESSION['Drnameexit'] == 1) {
+                            echo "<div id='momp'>User Name Already Exist Choose Other User Name<button  onclick='cll()' class='btn btt1' type='button'><i class='far fa-window-close'></i></button></div>";
+                        }
+                        ?>
+                        <div class="row" id="row4" style="display: none">
+                            <div class="col-md-12">
+                                <h5>Add Doctor<button  onclick="clickRow8()" class="btn btt1" type="button"><i class="far fa-window-close"></i></button></h5>
+                                <form action="ProfileAdmain.php" method="post">
+                                <table class="content-table" width="100%">
+                                    <thead>
+                                    <th width="50%"></th>
+                                    <th width="50%"></th>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <td class="hhh">
+                                            User Name
+                                        </td>
+                                        <td>
+                                            <input style="" class="ss1" placeholder="User Name" type="text" name="Userdr" required>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="hhh">
+                                            Birth Date
+                                        </td>
+                                        <td>
+                                            <input type="date" class="ss1" name="BDdr"required>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="hhh">
+                                            Gender
+                                        </td>
+                                        <td>
+                                            <input required  class="sex" name="genderdr" id="l11" type="radio" value="male" ><label class="la" for="l11">Male</label>
+                                            <input class="sex" name="genderdr" id="l22" type="radio" value="female"> <label class="la" for="l22"> Female </label>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="hhh">
+                                            Mobile Phone
+                                        </td>
+                                        <td>
+                                            <input required class="butt l3 ss1" type="tel" name="phonedr" pattern="059[0-9]{7}" placeholder="Mobile Number">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="hhh">
+                                            Password
+                                        </td>
+                                        <td>
+                                            <input class="butt l4 ss1" type="password" placeholder="Password" name="passworddr" required >
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="hhh">
+                                            Specialization
+                                        </td>
+                                        <td>
+                                            <input  class="butt l3 ss1" type="text" name="special" placeholder="Specialization">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="hhh">
+                                            Start time
+                                        </td>
+                                        <td>
+                                            <input type="time" name="startdr" class="ss1">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="hhh">
+                                            End time
+                                        </td>
+                                        <td>
+                                            <input type="time" name="enddr" class="ss1">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="hhh">
+                                            Working Days
+                                        </td>
+                                        <td>
+
+                                            <label for="ch1">Saturday </label><input name="Saturday" type="checkbox" name="ch1" id="ch1"  value="1">
+                                            <label for="ch2">Sunday </label><input name="Sunday" type="checkbox" name="ch2" id="ch2" value="1">
+                                            <label for="ch3">Monday </label><input name="Monday" type="checkbox" name="ch3"  id="ch3"value="1">
+                                            <label for="ch4">Tuesday </label><input name="Tuesday" type="checkbox" name="ch4"  id="ch4" value="1">
+                                            <label for="ch5">Wednesday </label><input name="Wednesday" type="checkbox" name="ch5"  id="ch5" value="1">
+                                            <label for="ch6">Thursday </label><input name="Thursday" type="checkbox" name="ch6"  id="ch6" value="1">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+
+                                        </td>
+                                        <td>
+                                            <input class="btnadddr ss1" type="submit" value="Add Doctor"></input>
+                                        </td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                                </form>
                             </div>
                         </div>
                         <!--                        -->

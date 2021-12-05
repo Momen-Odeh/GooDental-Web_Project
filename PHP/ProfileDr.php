@@ -8,6 +8,17 @@ if($_SESSION['Is_Member']==0)
 {
     header('location:login.php');
 }
+else
+{
+    if($_SESSION['Member_level']==1)
+    {
+        header('location:Profile.php');
+    }
+    elseif ($_SESSION['Member_level']==3)
+    {
+        header('location:ProfileAdmain.php');
+    }
+}
 
 $UserName=$_SESSION['UserName'];
 $BirthDate=$_SESSION['BirthDate'];
@@ -291,7 +302,7 @@ elseif(isset($_POST['text6b']))
         <li><a href="../PHP/Home.php">Home</a></li>
         <li><a href="../PHP/Service.php">Services</a></li>
         <li><a href="../PHP/Contact_Location.php">Contact Us</a></li>
-        <li><a href="../PHP/Profile.php">Profile</a></li>
+        <li><a href="../PHP/ProfileDr.php">Profile</a></li>
     </ul>
 </nav>
 <div class="spaceofnav"></div>

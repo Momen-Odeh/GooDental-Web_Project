@@ -9,6 +9,17 @@ if($_SESSION['Is_Member']==0)
 {
   header('location:login.php');
 }
+else
+{
+    if ($_SESSION['Member_level']==2)
+    {
+        header('location:ProfileDr.php');
+    }
+    elseif ($_SESSION['Member_level']==3)
+    {
+        header('location:ProfileAdmain.php');
+    }
+}
 $UserName=$_SESSION['UserName'];
 $BirthDate=$_SESSION['BirthDate'];
 $Gender=$_SESSION['Gender'];
