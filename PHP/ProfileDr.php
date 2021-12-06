@@ -317,10 +317,10 @@ elseif(isset($_POST['text6b']))
                             <h3><?php
                                 echo "$UserName";
                                 ?></h3></h3>
-                            <a href="../PHP/Home.php">Home</a>
-                            <a href="#add_app" onclick="clic9()">Search</a>
+                            <a href="../PHP/Home.php"style="text-align: left; padding-left: 5%">Home</a>
+                            <a href="#add_app" onclick="clic9()"style="text-align: left; padding-left: 5%">Search</a>
 <!--                            <a href="../PHP/Contact_Location.php">Contact Us</a>-->
-                            <a href="../PHP/Logout.php">Sign out</a>
+                            <a href="../PHP/Logout.php"style="text-align: left; padding-left: 5%">Sign out</a>
                         </div>
                     </div>
                 </div>

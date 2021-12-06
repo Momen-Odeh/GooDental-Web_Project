@@ -4,6 +4,10 @@ if(!isset($_SESSION['Is_Member']))
 {
     $_SESSION['Is_Member']=0;
 }
+if(!isset($_SESSION['Member_level']))
+{
+    $_SESSION['Member_level']=0;
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">

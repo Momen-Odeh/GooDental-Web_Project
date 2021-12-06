@@ -332,12 +332,13 @@ if(isset($_POST["Userdr"]) && isset($_POST["BDdr"]) && isset($_POST["genderdr"])
                                 echo "$UserName";
                                 ?></h3>
 <!--                            ///////////////////////////////////////////////////////////////////////////////////////////////////////////////-->
-                            <a href="#row4" onclick="clickRow7()">Add Doctor</a>
-                            <a href="../PHP/Service.php">Order Processing</a>
-                            <a href="#row2" onclick="clickRow3()">Show all Patient</a>
-                            <a href="#row1" onclick="clickRow1()">Show all Doctor</a>
-                            <a href="#row3" onclick="clickRow5()">Contact US Messages</a>
-                            <a href="../PHP/Logout.php">Sign out</a>
+                            <a href="#row4" style="text-align: left; padding-left: 5%" onclick="clickRow7()">Add Doctor</a>
+                            <a href="#row5" style="text-align: left; padding-left: 5%"onclick="clickRow9()">Order Processing</a>
+                            <a href="#row2" style="text-align: left; padding-left: 5%"onclick="clickRow3()">Show all Patient</a>
+                            <a href="#row1" style="text-align: left; padding-left: 5%"onclick="clickRow1()">Show all Doctor</a>
+                            <a href="#row6" style="text-align: left; padding-left: 5%"onclick="clickRow11()">Show all Appointment</a>
+                            <a href="#row3" style="text-align: left; padding-left: 5%"onclick="clickRow5()">Contact US Messages</a>
+                            <a href="../PHP/Logout.php" style="text-align: left; padding-left: 5%">Sign out</a>
 <!--                            ///////////////////////////////////////////////////////////////////////////////////////////////////////////////-->
                         </div>
                     </div>
@@ -540,6 +541,24 @@ if(isset($_POST["Userdr"]) && isset($_POST["BDdr"]) && isset($_POST["genderdr"])
                     function clickRow8()
                     {
                         document.getElementById("row4").style.display = 'none';
+                    }
+                    function clickRow9()
+                    {
+                        document.getElementById("row5").style.display = 'block';
+                        document.getElementById("row7").style.display = 'block';
+                    }
+                    function clickRow10()
+                    {
+                        document.getElementById("row5").style.display = 'none';
+                        document.getElementById("row7").style.display = 'none';
+                    }
+                    function clickRow11()
+                    {
+                        document.getElementById("row6").style.display = 'block';
+                    }
+                    function clickRow12()
+                    {
+                        document.getElementById("row6").style.display = 'none';
                     }
                 </script>
 <!--                -->
@@ -776,12 +795,13 @@ if(isset($_POST["Userdr"]) && isset($_POST["BDdr"]) && isset($_POST["genderdr"])
                                         </td>
                                         <td>
 
-                                            <label for="ch1">Saturday </label><input name="Saturday" type="checkbox" name="ch1" id="ch1"  value="1">
-                                            <label for="ch2">Sunday </label><input name="Sunday" type="checkbox" name="ch2" id="ch2" value="1">
-                                            <label for="ch3">Monday </label><input name="Monday" type="checkbox" name="ch3"  id="ch3"value="1">
-                                            <label for="ch4">Tuesday </label><input name="Tuesday" type="checkbox" name="ch4"  id="ch4" value="1">
-                                            <label for="ch5">Wednesday </label><input name="Wednesday" type="checkbox" name="ch5"  id="ch5" value="1">
-                                            <label for="ch6">Thursday </label><input name="Thursday" type="checkbox" name="ch6"  id="ch6" value="1">
+                                            <input name="Saturday" type="checkbox" name="ch1" id="ch1"  value="1"><label for="ch1">Saturday </label>
+                                            <input name="Sunday" type="checkbox" name="ch2" id="ch2" value="1"><label for="ch2">Sunday </label>
+                                            <input name="Monday" type="checkbox" name="ch3"  id="ch3"value="1"><label for="ch3">Monday </label>
+                                            <br>
+                                            <input name="Tuesday" type="checkbox" name="ch4"  id="ch4" value="1"><label for="ch4">Tuesday </label>
+                                            <input name="Wednesday" type="checkbox" name="ch5"  id="ch5" value="1"><label for="ch5">Wednesday </label>
+                                            <input name="Thursday" type="checkbox" name="ch6"  id="ch6" value="1"><label for="ch6">Thursday </label>
                                         </td>
                                     </tr>
                                     <tr>
@@ -798,6 +818,172 @@ if(isset($_POST["Userdr"]) && isset($_POST["BDdr"]) && isset($_POST["genderdr"])
                             </div>
                         </div>
                         <!--                        -->
+                        <!--                        -->
+                        <div class="row" id="row5" style="display: block">
+                            <div class="col-md-12">
+                                <h5>Order Processing<button  onclick="clickRow10()" class="btn btt1" type="button"><i class="far fa-window-close"></i></button><button  onclick="clickRow100()" class="btn btt1" type="button"><i class="fas fa-sync-alt"></i></button></h5>
+                                <table class="content-table" width="100%">
+                                    <thead>
+                                    <th width="20%">Doctor Name</th>
+                                    <th width="20%">Patient Name</th>
+                                    <th width="20%">Date</th>
+<!--                                    <th width="10%">Start Time</th>-->
+<!--                                    <th width="10%">End Time</th>-->
+<!--                                    <th width="10%">State</th>-->
+                                    <th width="20%">Describtion</th>
+                                    <th width="20%">Confirm</th>
+                                    </thead>
+                                    <tbody>
+                                    <script type="text/javascript">
+                                        function updatest(){
+                                        // var rowId=event.target.parentNode.id;
+                                        // var data=document.getElementById("btnsave").querySelectorAll('.row-data')
+                                        // alert(data[0]);
+                                        //     var idp=data[0].innerHTML;
+                                        //     location.href="ProfileAdmain.php?x="+idp+"";
+                                        //     window.location.href='';
+                                        }
+                                    </script>
+                                    <?php
+                                    $db=new mysqli('localhost','root','','goodental');
+                                    $qrystr="SELECT * FROM `recoversession` WHERE `State`='On Wait';";
+                                    $res=$db->query($qrystr);
+                                    for($i=0;$i<$res->num_rows;$i++)
+                                    {
+//                                        echo "<form class='row-data' action='ProfileAdmain.php' method='post'>";
+                                        $row=$res->fetch_row();
+                                        $_SESSION['DDRN']=$row[0];
+                                        $_SESSION['PPAN']=$row[1];
+                                        $_SESSION['DDDA']=$row[2];
+                                        echo "<tr>";
+                                        echo "<td name='USN'>$row[0]</td>";
+                                        echo "<td name='DSN'>$row[1]</td>";
+                                        echo "<td name='DAA'>$row[2]</td>";
+//                                        echo "<td><input name='starttiming' type='time'></td>";
+//                                        echo "<td><input name='endt-iming' type='time'></td>";
+//                                        echo "<td>
+//                                        <select name='state' size='1'>
+//                                        <option value='accept'>accept</option>
+//                                        <option value='reject'>reject</option>
+//                                        </select>
+//                                        </td>";
+                                        echo "<td>$row[6]</td>";
+                                        $rr="#row7";
+                                        echo "<td><button style='width: 100%;border-radius: 5px; background-color: #00cccc;color: white;font-weight: bold' onclick="."window.location.href='http://localhost/Web_Project/PHP/ProfileAdmain.php?USN=$row[0]&DSN=$row[1]&DAA=$row[2]'".";"." id='btnsave' name='btnsave'>Select</button></td>";
+                                        echo "</tr>";
+//                                        echo "</form>";
+                                    }
+                                    $db->close();
+                                    ?>
+                                    </tbody>
+
+                                </table>
+                            </div>
+                        </div>
+                        <!--                        -->
+                        <!--                        -->
+                        <div class="row" id="row7" style="display: block">
+                            <div class="col-md-12">
+                                <script type="text/javascript">
+                                    function clickRow100()
+                                    {
+                                        window.location.href="http://localhost/Web_Project/PHP/ProfileAdmain.php#row5";
+                                    }
+                                </script>
+                                <h5>UPDATE</h5>
+                                <table class="content-table" width="100%">
+<!--                                    /////////////////////////////////////////////-->
+                                    <thead>
+                                    <th width="25%">Stat Time</th>
+                                    <th width="25%">End Time</th>
+                                    <th width="25%">State</th>
+                                    <th width="25%">Update</th>
+                                    </thead>
+                                    <tbody>
+<!--                                    <form action="ProfileAdmain.php" method="post">-->
+                                        <script type="text/javascript">
+                                        function ss()
+                                        {
+                                            // alert(document.getElementById('stpo').value);
+
+                                            window.location.href=window.location.href+"&stpo="+document.getElementById('stpo').value
+                                                +"&stpo1="+document.getElementById('stpo1').value+"&stpo2="+document.getElementById('stpo2').value+"#row5";
+
+
+                                        }
+                                        </script>
+                                        <?php
+                                        if(isset($_GET['stpo']) && isset($_GET['stpo1']))
+                                        {
+                                            $USN=$_GET['USN'];
+                                            $DSN=$_GET['DSN'];
+                                            $DAA=$_GET['DAA'];
+                                            $stpo=$_GET['stpo'];
+                                            $stpo1=$_GET['stpo1'];
+                                            $stpo2=$_GET['stpo2'] ;
+                                            $db = new mysqli('localhost', 'root', '', 'goodental');
+                                            $qrystr = "UPDATE `recoversession` SET `StartTime` = '$stpo', `EndTime` = '$stpo1', `State` = '$stpo2' WHERE `recoversession`.`DoctorName` = '$USN' AND `recoversession`.`PatientName` = '$DSN' AND `recoversession`.`Date` = '$DAA';";
+//                                            echo $qrystr;
+                                            $res = $db->query($qrystr);
+                                            $db->commit();
+                                            $db->close();
+//                                            header("location:http://localhost/Web_Project/PHP/ProfileAdmain.php");
+                                        }
+                                        ?>
+                                        <tr>
+                                            <td><input name="stpo" id="stpo" type="time"></td>
+                                            <td><input name="stpo1" id="stpo1" type="time"></td>
+                                            <td>
+                                                <select name=name="stpo2" id="stpo2" size='1'>
+                                                    <option value='accept'>accept</option>
+                                                    <option value='reject'>reject</option>
+                                                </select>
+                                            </td>
+                                            <td><button style='width: 100%;border-radius: 5px; background-color: #00cccc;color: white;font-weight: bold' onclick="ss()"">Update</button></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <!--                        -->
+                        <div class="row" id="row6" style="display: none">
+                            <div class="col-md-12">
+                                <h5>Show all appointment<button  onclick="clickRow12()" class="btn btt1" type="button"><i class="far fa-window-close"></i></button></h5>
+                                <table class="content-table" width="100%">
+                                    <thead>
+                                    <th width="10%">Doctor Name</th>
+                                    <th width="10%">Patient Name</th>
+                                    <th width="15%">Date</th>
+                                    <th width="15%">Start Time</th>
+                                    <th width="10%">End Time</th>
+                                    <th width="10%">State</th>
+                                    <th width="10%">Describtion</th>
+                                    </thead>
+                                    <tbody>
+                                    <?php
+                                    $db=new mysqli('localhost','root','','goodental');
+                                    $qrystr="SELECT * FROM `recoversession`;";
+                                    $res=$db->query($qrystr);
+                                    for($i=0;$i<$res->num_rows;$i++)
+                                    {
+                                        $row=$res->fetch_row();
+                                        echo "<tr>";
+                                        echo "<td>$row[0]</td>";
+                                        echo "<td>$row[1]</td>";
+                                        echo "<td>$row[2]</td>";
+                                        echo "<td>$row[3]</td>";
+                                        echo "<td>$row[4]</td>";
+                                        echo "<td>$row[5]</td>";
+                                        echo "<td>$row[6]</td>";
+                                        echo "</tr>";
+                                    }
+                                    $db->close();
+                                    ?>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <!--                        -->
+                        </div>
                     </div>
                 </div>
             </div>
