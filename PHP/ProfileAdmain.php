@@ -172,14 +172,14 @@ elseif(isset($_POST['text5']))
 
 //
 //add doctor code
-
-if(isset($_POST["Userdr"]) && isset($_POST["BDdr"]) && isset($_POST["genderdr"]) && isset($_POST["phonedr"]) && isset($_POST["passworddr"]) )
+//ddd
+if(isset($_POST["Userdr"]) && isset($_POST["BDdr"]) && isset($_POST["genderdr"]) && isset($_POST["phonedr"]))
 {
     $Userdr=$_POST['Userdr'];
     $BDdr=$_POST['BDdr'];
     $genderdr=$_POST['genderdr'];
     $phonedr=$_POST['phonedr'];
-    $passworddr=$_POST['passworddr'];
+//    $passworddr=$_POST['passworddr'];
     $special=$_POST['special'];
     $startdr=$_POST['startdr'];
     $enddr=$_POST['enddr'];
@@ -274,7 +274,7 @@ if(isset($_POST["Userdr"]) && isset($_POST["BDdr"]) && isset($_POST["genderdr"])
         else{
 
             $db = new mysqli('localhost', 'root', '', 'goodental');
-            $qrystr = "INSERT INTO `doctor` (`UserName`, `BirthDate`, `Gender`, `MobilePhone`, `Password`, `Specialization`, `StartTime`, `EndTime`, `Saturday`, `Sunday`, `Monday`, `Tuesday`, `Wednesday`, `Thursday`) VALUES ('$Userdr', '$BDdr', '$genderdr', '$phonedr', SHA1('$passworddr'), '$special', '$startdr', '$enddr', '$Saturday', '$Sunday', '$Monday', '$Tuesday', '$Wednesday', '$Thursday');";
+            $qrystr = "INSERT INTO `doctor` (`UserName`, `BirthDate`, `Gender`, `MobilePhone`, `Password`, `Specialization`, `StartTime`, `EndTime`, `Saturday`, `Sunday`, `Monday`, `Tuesday`, `Wednesday`, `Thursday`) VALUES ('$Userdr', '$BDdr', '$genderdr', '$phonedr', SHA1('$Userdr'), '$special', '$startdr', '$enddr', '$Saturday', '$Sunday', '$Monday', '$Tuesday', '$Wednesday', '$Thursday');";
             $res = $db->query($qrystr);
             $db->commit();
             $db->close();
@@ -437,7 +437,7 @@ if(isset($_POST["Userdr"]) && isset($_POST["BDdr"]) && isset($_POST["genderdr"])
                                 <?php
                                 echo "$Gender";
                                 ?>
-                                <button  onclick="clic3()" class="btn btt1" type="button"><i class="fas fa-edit icc"></i></button>
+<!--                                <button  onclick="clic3()" class="btn btt1" type="button"><i class="fas fa-edit icc"></i></button>-->
                                 <form class="fo" id="form3" action="ProfileAdmain.php" method="post">
                                     <input required  class="sex tet1" name="text3" id="l1" type="radio" value="male" ><label class="la" for="l1">Male</label>
                                     <input class="sex text1" name="text3" id="l2" type="radio" value="female"> <label class="la" for="l2"> Female </label>
@@ -757,14 +757,14 @@ if(isset($_POST["Userdr"]) && isset($_POST["BDdr"]) && isset($_POST["genderdr"])
                                             <input required class="butt l3 ss1" type="tel" name="phonedr" pattern="059[0-9]{7}" placeholder="Mobile Number">
                                         </td>
                                     </tr>
-                                    <tr>
-                                        <td class="hhh">
-                                            Password
-                                        </td>
-                                        <td>
-                                            <input class="butt l4 ss1" type="password" placeholder="Password" name="passworddr" required >
-                                        </td>
-                                    </tr>
+<!--                                    <tr>-->
+<!--                                        <td class="hhh">-->
+<!--                                            Password-->
+<!--                                        </td>-->
+<!--                                        <td>-->
+<!--                                            <input class="butt l4 ss1" type="password" placeholder="Password" name="passworddr" required >-->
+<!--                                        </td>-->
+<!--                                    </tr>-->
                                     <tr>
                                         <td class="hhh">
                                             Specialization
@@ -815,6 +815,45 @@ if(isset($_POST["Userdr"]) && isset($_POST["BDdr"]) && isset($_POST["genderdr"])
                                     </tbody>
                                 </table>
                                 </form>
+                            </div>
+                        </div>
+                        <!--                        -->
+                        <!--                        -->
+                        <div class="row" id="row6" style="display: none">
+                            <div class="col-md-12">
+                                <h5>Show all appointment<button  onclick="clickRow12()" class="btn btt1" type="button"><i class="far fa-window-close"></i></button></h5>
+                                <table class="content-table" width="100%">
+                                    <thead>
+                                    <th width="10%">Doctor Name</th>
+                                    <th width="10%">Patient Name</th>
+                                    <th width="15%">Date</th>
+                                    <th width="15%">Start Time</th>
+                                    <th width="10%">End Time</th>
+                                    <th width="10%">State</th>
+                                    <th width="10%">Describtion</th>
+                                    </thead>
+                                    <tbody>
+                                    <?php
+                                    $db=new mysqli('localhost','root','','goodental');
+                                    $qrystr="SELECT * FROM `recoversession`;";
+                                    $res=$db->query($qrystr);
+                                    for($i=0;$i<$res->num_rows;$i++)
+                                    {
+                                        $row=$res->fetch_row();
+                                        echo "<tr>";
+                                        echo "<td>$row[0]</td>";
+                                        echo "<td>$row[1]</td>";
+                                        echo "<td>$row[2]</td>";
+                                        echo "<td>$row[3]</td>";
+                                        echo "<td>$row[4]</td>";
+                                        echo "<td>$row[5]</td>";
+                                        echo "<td>$row[6]</td>";
+                                        echo "</tr>";
+                                    }
+                                    $db->close();
+                                    ?>
+                                    </tbody>
+                                </table>
                             </div>
                         </div>
                         <!--                        -->
@@ -944,45 +983,6 @@ if(isset($_POST["Userdr"]) && isset($_POST["BDdr"]) && isset($_POST["genderdr"])
                                     </tbody>
                                 </table>
                             </div>
-                        <!--                        -->
-                        <div class="row" id="row6" style="display: none">
-                            <div class="col-md-12">
-                                <h5>Show all appointment<button  onclick="clickRow12()" class="btn btt1" type="button"><i class="far fa-window-close"></i></button></h5>
-                                <table class="content-table" width="100%">
-                                    <thead>
-                                    <th width="10%">Doctor Name</th>
-                                    <th width="10%">Patient Name</th>
-                                    <th width="15%">Date</th>
-                                    <th width="15%">Start Time</th>
-                                    <th width="10%">End Time</th>
-                                    <th width="10%">State</th>
-                                    <th width="10%">Describtion</th>
-                                    </thead>
-                                    <tbody>
-                                    <?php
-                                    $db=new mysqli('localhost','root','','goodental');
-                                    $qrystr="SELECT * FROM `recoversession`;";
-                                    $res=$db->query($qrystr);
-                                    for($i=0;$i<$res->num_rows;$i++)
-                                    {
-                                        $row=$res->fetch_row();
-                                        echo "<tr>";
-                                        echo "<td>$row[0]</td>";
-                                        echo "<td>$row[1]</td>";
-                                        echo "<td>$row[2]</td>";
-                                        echo "<td>$row[3]</td>";
-                                        echo "<td>$row[4]</td>";
-                                        echo "<td>$row[5]</td>";
-                                        echo "<td>$row[6]</td>";
-                                        echo "</tr>";
-                                    }
-                                    $db->close();
-                                    ?>
-                                    </tbody>
-                                </table>
-                            </div>
-                        </div>
-                        <!--                        -->
                         </div>
                     </div>
                 </div>

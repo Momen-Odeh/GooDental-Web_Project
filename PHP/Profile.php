@@ -391,7 +391,7 @@ if(isset($_POST['appointdate']) && isset($_POST['DescriptTxt']))
                             <?php
                             echo "$Gender";
                             ?>
-                            <button  onclick="clic3()" class="btn btt1" type="button"><i class="fas fa-edit icc"></i></button>
+<!--                            <button  onclick="clic3()" class="btn btt1" type="button"><i class="fas fa-edit icc"></i></button>-->
                             <form class="fo" id="form3" action="Profile.php" method="post">
                                 <input required  class="sex tet1" name="text3" id="l1" type="radio" value="male" ><label class="la" for="l1">Male</label>
                                 <input class="sex text1" name="text3" id="l2" type="radio" value="female"> <label class="la" for="l2"> Female </label>
