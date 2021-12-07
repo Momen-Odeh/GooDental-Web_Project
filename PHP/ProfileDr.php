@@ -307,8 +307,8 @@ elseif(isset($_POST['text6b']))
                                 echo "$UserName";
                                 ?></h3></h3>
                             <a href="../PHP/Home.php">Home</a>
-                            <a href="#add_app" onclick="clic9()">Search</a>
-<!--                            <a href="../PHP/Contact_Location.php">Contact Us</a>-->
+                            <a href="#add_app" onclick="clic9()">Search By Name</a>
+                            <a href="#add_app1" onclick="clic91()">Search By Date</a>
                             <a href="../PHP/Logout.php">Sign out</a>
                         </div>
                     </div>
@@ -569,49 +569,12 @@ elseif(isset($_POST['text6b']))
                             </div>
                         </div>
                         <hr>
-<!--                        <div class="row">-->
-<!--                            <div class="col-md-3">-->
-<!--                                <h5>WorkingDay</h5>-->
-<!--                            </div>-->
-<!--                            <div class="col-md-9 text-secondary">-->
-<!--                                <script type="text/javascript">-->
-<!--                                    let x8=1;-->
-<!--                                    function clic8()-->
-<!--                                    {-->
-<!--                                        if(x8==1) {-->
-<!--                                            document.getElementById("form8").style.visibility = 'visible';-->
-<!--                                            x8=0;-->
-<!--                                        }-->
-<!--                                        else if (x8==0){-->
-<!--                                            document.getElementById("form8").style.visibility = 'hidden';-->
-<!--                                            x8=1;-->
-<!--                                        }-->
-<!--                                    }-->
-<!--                                </script>-->
-<!---->
-<!--                                --><?php
-//                                echo "$address";
-//                                ?>
-<!--                                <button  onclick="clic8()" class="btn btt1" type="button"><i class="fas fa-edit icc"></i></button>-->
-<!--                                <form class="fo" id="form8" action="ProfileDr.php" method="post">-->
-<!--                                    Sat<input type="checkbox" name="text8a">-->
-<!--                                    Sun<input type="checkbox" name="text8b">-->
-<!--                                    Mon<input type="checkbox" name="text8c">-->
-<!--                                    Tue<input type="checkbox" name="text8d">-->
-<!--                                    Wed<input type="checkbox" name="text8e">-->
-<!--                                    Thu<input type="checkbox" name="text8f">-->
-<!--                                    <input type="submit" name="text8" class="subb" value="Update">-->
-<!--                                </form>-->
-<!--                            </div>-->
-<!--                        </div>-->
-<!--                        <hr>-->
                     </div>
                 </div>
                 <div class="card mb-3 content">
                     <h1 class="m-3">Booked appointments</h1>
                     <div class="card-body">
                         <div class="row">
-<!--                            -->
                             <div class="col-md-12">
                                 <table class="content-table" width="100%">
                                     <thead>
@@ -661,36 +624,25 @@ elseif(isset($_POST['text6b']))
                                 {
                                     document.getElementById("searchres").style.display = 'block';
                                 }
+                                function clic91()
+                                {
+                                    document.getElementById("add_app1").style.display = 'block';
+                                }
+                                function clic92()
+                                {
+                                    document.getElementById("add_app1").style.display = 'none';
+                                }
                             </script>
                             <div class="col-md-12 addt" id="add_app">
                                 <h5>Search about Patient<button  onclick="clic10()" class="btn btt1" type="button"><i class="far fa-window-close"></i></button></h5>
                                 <table class="content-table" width="100%" >
                                     <thead>
                                     <th width="50%">Patient Name</th>
-<!--                                    <th width="25%">Date</th>-->
-<!--                                    <th width="25%">Description</th>-->
                                     <th width="50%">Confirm</th>
                                     </thead>
                                     <tbody>
                                     <tr>
                                         <form action="ProfileDr.php" method="post">
-<!--                                            <td>-->
-<!--                                                <select size="1" name="namedr" class="DrNamelist" required>-->
-<!--                                                    --><?php
-//                                                    $db = new mysqli('localhost', 'root', '', 'goodental');
-//                                                    $qrystr = "select * from doctor";
-//                                                    $res = $db->query($qrystr);
-//                                                    for ($i = 0; $i < $res->num_rows; $i++) {
-//                                                        $row = $res->fetch_row();
-//                                                        echo"<option value=".$row[0].">$row[0]</option>";
-//                                                    }
-//                                                    $db->close();
-//                                                    ?>
-<!--                                                </select>-->
-<!--                                            </td>-->
-<!--                                            <td>-->
-<!--                                                <input type="date" class="appointdate" name="appointdate" required>-->
-<!--                                            </td>-->
                                             <td>
                                                 <input style="width: 100%" type="text"name="searchTxt" class="patnameTxt" required>
                                             </td>
@@ -699,7 +651,28 @@ elseif(isset($_POST['text6b']))
                                     </tr>
                                     </tbody>
                                 </table>
-                        </div>
+                            </div>
+<!--                            -->
+                            <div class="col-md-12 addt" id="add_app1">
+                                <h5>Search about Patient<button  onclick="clic92()" class="btn btt1" type="button"><i class="far fa-window-close"></i></button></h5>
+                                <table class="content-table" width="100%" >
+                                    <thead>
+                                    <th width="50%">Date</th>
+                                    <th width="50%">Confirm</th>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <form action="ProfileDr.php" method="post">
+                                            <td>
+                                                <input style="width: 100%" type="date"name="searchTxt1" class="patnameTxt" required>
+                                            </td>
+                                            <td><input type="submit" onclick="clic1ab()" class="Add_appointment" value="Search"></td>
+                                        </form>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+<!--                            -->
 <!--                            /////////////////////////////////////////////////////////////////////////////////////-->
                             <div class="col-md-12" id="searchres" style="display: block">
                                 <h5>Search about Patient<button  onclick="clic1aa()" class="btn btt1" type="button"><i class="far fa-window-close"></i></button></h5>
@@ -722,6 +695,33 @@ elseif(isset($_POST['text6b']))
                                             $drrr=$_SESSION['UserName'];
                                             $db = new mysqli('localhost', 'root', '', 'goodental');
                                             $qrystr = "SELECT * FROM `recoversession` WHERE `recoversession`.`PatientName`='$usserch' AND `DoctorName`='$drrr';";
+                                            $res = $db->query($qrystr);
+                                            for($i=0;$i<$res->num_rows;$i++)
+                                            {
+                                                $row=$res->fetch_row();
+                                                echo "<tr>";
+                                                echo "<td>$row[1]</td>";
+                                                echo "<td>$row[2]</td>";
+                                                echo "<td>$row[3]</td>";
+                                                echo "<td>$row[4]</td>";
+                                                echo "<td>$row[5]</td>";
+                                                echo "<td>$row[6]</td>";
+                                                echo "</tr>";
+                                            }
+                                            $db->close();
+                                        }
+                                        catch (Exception $ex)
+                                        {
+
+                                        }
+                                    }
+                                    if(isset($_POST['searchTxt1']))
+                                    {
+                                        try {
+                                            $dateserch=$_POST['searchTxt1'];
+                                            $drrr=$_SESSION['UserName'];
+                                            $db = new mysqli('localhost', 'root', '', 'goodental');
+                                            $qrystr = "SELECT * FROM `recoversession` WHERE `recoversession`.`Date`='$dateserch' AND `DoctorName`='$drrr';";
                                             $res = $db->query($qrystr);
                                             for($i=0;$i<$res->num_rows;$i++)
                                             {

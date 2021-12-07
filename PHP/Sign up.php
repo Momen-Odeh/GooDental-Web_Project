@@ -117,7 +117,7 @@ if(isset($_POST["Username"]) && isset($_POST["BD"]) && isset($_POST["gender"]) &
             <?php
             if( $_SESSION['tmp']==1)
             {
-                echo "<div>please choose another user Name</div>";
+                echo "<div style='font-size: 20px'>please choose another user Name</div>";
             }
             ?>
             <button class="b"> Sign Up</button>
