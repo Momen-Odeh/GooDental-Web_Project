@@ -66,7 +66,7 @@ if(!isset($_SESSION['Is_Member']))
                 <i class="fas fa-heartbeat"></i>
                 <h3>Children's Dentistry</h3>
                 <p>Here at GOODental Clinic, we make
-                    Pediatric Dental Healthcare our top priority!</p>
+                    top priority!</p>
             </div>
         </div>
         <div class="card">
@@ -83,7 +83,7 @@ if(!isset($_SESSION['Is_Member']))
                 <i class="fas fa-user-md"></i>
                 <h3>Periodontics</h3>
                 <p>Periodontal disease affects the gums and
-                    tissues in the mouth that hold the teeth in place.</p>
+                    tissues that hold the teeth in place.</p>
             </div>
         </div>
         <!--        -->
@@ -105,7 +105,7 @@ if(!isset($_SESSION['Is_Member']))
                 <i class="fas fa-notes-medical"></i>
                 <h3>Teeth whitening</h3>
                 <p> Involves bleaching your teeth to make them lighter.
-                    It can't make your teeth white by several shades.</p>
+                    It can't  by several shades.</p>
             </div>
         </div>
         <div class="card">
@@ -121,8 +121,8 @@ if(!isset($_SESSION['Is_Member']))
             <div class="box">
                 <i class="fas fa-crutch"></i>
                 <h3>gum treatment</h3>
-                <p>After a thorough periodontal evaluation,recommendations
-                    for treatment range to surgical procedures .</p>
+                <p>After a thorough periodontal,recommendations
+                    procedures .</p>
             </div>
         </div>
         <!--        -->
@@ -131,7 +131,7 @@ if(!isset($_SESSION['Is_Member']))
                 <i class="fas fa-vial"></i>
                 <h3>teeth brace</h3>
                 <p>Are devices used in orthodontics that align
-                    aiming to improve dental health. Braces also fix gaps</p>
+                 . Braces also fix gaps</p>
             </div>
         </div>
         <br>
@@ -147,25 +147,25 @@ if(!isset($_SESSION['Is_Member']))
     <div class="carousel-inner">
         <div class="carousel-item active">
             <img src="../img/fd.jpg" class="d-block w-100" alt="..."style="height: 100vh">
-            <div class="carousel-caption d-none d-md-block">
-                <h5 style="color: black">Sally imad</h5>
-                <p style="color: black">"The best dental care our family has experienced in
-                    Palestine. The staff was professional and friendly, we received
-                    excellent service and were very happy with the results of the treatment."</p>
+            <div class="carousel-caption d-none d-md-block" >
+                <h5 style=" color:#2c3e50; font-family: 'COCO';font-weight: bold;">Sally imad</h5>
+                <p style="color:#2c3e50; font-family: 'COCO'; ">"The best dental care our family has experienced in
+                    Palestine.  we received
+                    excellent service and were very happy with the results."</p>
             </div>
         </div>
         <div class="carousel-item">
             <img src="../img/i.jpg" class="d-block w-100" alt="..."style="height: 100vh">
             <div class="carousel-caption d-none d-md-block">
-                <h5 style="color: black">Haya Samer</h5>
-                <p style="color: black">"The best dentist one can possibly get. Also a great person."</p>
+                <h5 style=" color:#2c3e50; font-family: 'COCO';font-weight: bold;">Haya Samer</h5>
+                <p style="color:#2c3e50; font-family: 'COCO';">"The best dentist one can possibly get. Also a great person."</p>
             </div>
         </div>
         <div class="carousel-item">
             <img src="../img/iii.jpg" class="d-block w-100" alt="..." style="height: 100vh">
             <div class="carousel-caption d-none d-md-block">
-                <h5 style="color: black">Ali Abd-Alhadi</h5>
-                <p style="color: black">"Highly recommended. Great dentist who over the years has helped
+                <h5 style= "color:#2c3e50; font-family: 'COCO';font-weight: bold;">Ali Abd-Alhadi</h5>
+                <p style="color:#2c3e50; font-family: 'COCO';">"Highly recommended. Great dentist who over the years has helped
                     save my teeth and improve their health and stability."</p>
             </div>
         </div>

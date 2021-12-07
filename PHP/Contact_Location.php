@@ -80,10 +80,10 @@ if(isset($_POST['txt1']) && isset($_POST['txt2']) && isset($_POST['txt3']))
     <div class="contact-form">
         <h1>Contact Us</h1>
         <form action="Contact_Location.php" method="post">
-            <input type="text" name="txt1" placeholder="Name" class="contact-form-txt">
-            <input type="text" name="txt2" placeholder="Email" class="contact-form-txt">
-            <textarea name="txt3" placeholder="Message" class="contact-form-txtarea"></textarea>
-            <input type="submit" name="Submit" class="contact-form-btn">
+            <input type="text" name="txt1" placeholder="Name" class="contact-form-txt" required>
+            <input type="text" name="txt2" placeholder="Email" class="contact-form-txt"required>
+            <textarea required name="txt3" placeholder="Message" class="contact-form-txtarea"></textarea>
+            <input  type="submit" name="Submit" class="contact-form-btn">
         </form>
     </div>
 </div>
