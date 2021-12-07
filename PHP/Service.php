@@ -137,14 +137,7 @@ if(!isset($_SESSION['Is_Member']))
         <br>
     </div>
 </div>
-<!--<div class="quote">-->
-<!--    <div class="container">-->
-<!--        <q>-->
-<!--            The best dental care our family has experienced in Palestine. The staff was professional and friendly, we received excellent service and were very happy with the results of the treatment.-->
-<!--        </q>-->
-<!--        <span>Mahmoud Shami</span>-->
-<!--    </div>-->
-<!--</div>-->
+
 <div id="carouselExampleCaptions" class="carousel slide sss" data-bs-ride="carousel">
     <div class="carousel-indicators">
         <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
