@@ -966,7 +966,7 @@ if(isset($_POST["Userdr"]) && isset($_POST["BDdr"]) && isset($_POST["genderdr"])
                                             $res = $db->query($qrystr);
                                             $db->commit();
                                             $db->close();
-                                            echo "";
+
 //                                            header("location:http://localhost/Web_Project/PHP/ProfileAdmain.php");
                                         }
                                         ?>
