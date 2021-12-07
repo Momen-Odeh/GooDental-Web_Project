@@ -8,17 +8,6 @@ if($_SESSION['Is_Member']==0)
 {
     header('location:login.php');
 }
-else
-{
-    if($_SESSION['Member_level']==1)
-    {
-        header('location:Profile.php');
-    }
-    elseif ($_SESSION['Member_level']==3)
-    {
-        header('location:ProfileAdmain.php');
-    }
-}
 
 $UserName=$_SESSION['UserName'];
 $BirthDate=$_SESSION['BirthDate'];
@@ -302,7 +291,7 @@ elseif(isset($_POST['text6b']))
         <li><a href="../PHP/Home.php">Home</a></li>
         <li><a href="../PHP/Service.php">Services</a></li>
         <li><a href="../PHP/Contact_Location.php">Contact Us</a></li>
-        <li><a href="../PHP/ProfileDr.php">Profile</a></li>
+        <li><a href="../PHP/Profile.php">Profile</a></li>
     </ul>
 </nav>
 <div class="spaceofnav"></div>
@@ -317,10 +306,10 @@ elseif(isset($_POST['text6b']))
                             <h3><?php
                                 echo "$UserName";
                                 ?></h3></h3>
-                            <a href="../PHP/Home.php"style="text-align: left; padding-left: 5%">Home</a>
-                            <a href="#add_app" onclick="clic9()"style="text-align: left; padding-left: 5%">Search</a>
+                            <a href="../PHP/Home.php">Home</a>
+                            <a href="#add_app" onclick="clic9()">Search</a>
 <!--                            <a href="../PHP/Contact_Location.php">Contact Us</a>-->
-                            <a href="../PHP/Logout.php"style="text-align: left; padding-left: 5%">Sign out</a>
+                            <a href="../PHP/Logout.php">Sign out</a>
                         </div>
                     </div>
                 </div>
@@ -418,7 +407,7 @@ elseif(isset($_POST['text6b']))
                                 <?php
                                 echo "$Gender";
                                 ?>
-<!--                                <button  onclick="clic3()" class="btn btt1" type="button"><i class="fas fa-edit icc"></i></button>-->
+                                <button  onclick="clic3()" class="btn btt1" type="button"><i class="fas fa-edit icc"></i></button>
                                 <form class="fo" id="form3" action="ProfileDr.php" method="post">
                                     <input required  class="sex tet1" name="text3" id="l1" type="radio" value="male" ><label class="la" for="l1">Male</label>
                                     <input class="sex text1" name="text3" id="l2" type="radio" value="female"> <label class="la" for="l2"> Female </label>

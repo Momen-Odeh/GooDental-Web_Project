@@ -331,7 +331,7 @@ if(isset($_POST["Userdr"]) && isset($_POST["BDdr"]) && isset($_POST["genderdr"])
                             <h3><?php
                                 echo "$UserName";
                                 ?></h3>
-<!--                            ///////////////////////////////////////////////////////////////////////////////////////////////////////////////-->
+                            <!--                            ///////////////////////////////////////////////////////////////////////////////////////////////////////////////-->
                             <a href="#row4" style="text-align: left; padding-left: 5%" onclick="clickRow7()">Add Doctor</a>
                             <a href="#row5" style="text-align: left; padding-left: 5%"onclick="clickRow9()">Order Processing</a>
                             <a href="#row2" style="text-align: left; padding-left: 5%"onclick="clickRow3()">Show all Patient</a>
@@ -339,7 +339,7 @@ if(isset($_POST["Userdr"]) && isset($_POST["BDdr"]) && isset($_POST["genderdr"])
                             <a href="#row6" style="text-align: left; padding-left: 5%"onclick="clickRow11()">Show all Appointment</a>
                             <a href="#row3" style="text-align: left; padding-left: 5%"onclick="clickRow5()">Contact US Messages</a>
                             <a href="../PHP/Logout.php" style="text-align: left; padding-left: 5%">Sign out</a>
-<!--                            ///////////////////////////////////////////////////////////////////////////////////////////////////////////////-->
+                            <!--                            ///////////////////////////////////////////////////////////////////////////////////////////////////////////////-->
                         </div>
                     </div>
                 </div>
@@ -437,7 +437,7 @@ if(isset($_POST["Userdr"]) && isset($_POST["BDdr"]) && isset($_POST["genderdr"])
                                 <?php
                                 echo "$Gender";
                                 ?>
-<!--                                <button  onclick="clic3()" class="btn btt1" type="button"><i class="fas fa-edit icc"></i></button>-->
+                                <!--                                <button  onclick="clic3()" class="btn btt1" type="button"><i class="fas fa-edit icc"></i></button>-->
                                 <form class="fo" id="form3" action="ProfileAdmain.php" method="post">
                                     <input required  class="sex tet1" name="text3" id="l1" type="radio" value="male" ><label class="la" for="l1">Male</label>
                                     <input class="sex text1" name="text3" id="l2" type="radio" value="female"> <label class="la" for="l2"> Female </label>
@@ -508,7 +508,7 @@ if(isset($_POST["Userdr"]) && isset($_POST["BDdr"]) && isset($_POST["genderdr"])
                         <hr>
                     </div>
                 </div>
-<!--                -->
+                <!--                -->
                 <script type="text/javascript">
                     function clickRow1()
                     {
@@ -561,11 +561,11 @@ if(isset($_POST["Userdr"]) && isset($_POST["BDdr"]) && isset($_POST["genderdr"])
                         document.getElementById("row6").style.display = 'none';
                     }
                 </script>
-<!--                -->
+                <!--                -->
                 <div class="card mb-3 content">
                     <h1 class="m-3">Management</h1>
                     <div class="card-body">
-<!--                        -->
+                        <!--                        -->
                         <div class="row" id="row1" style="display:none;">
                             <div class="col-md-12">
                                 <h5>Show all Doctor<button  onclick="clickRow2()" class="btn btt1" type="button"><i class="far fa-window-close"></i></button></h5>
@@ -631,7 +631,7 @@ if(isset($_POST["Userdr"]) && isset($_POST["BDdr"]) && isset($_POST["genderdr"])
                                 </table>
                             </div>
                         </div>
-<!--                        -->
+                        <!--                        -->
                         <!--                        -->
                         <div class="row" id="row2" style="display: none">
                             <div class="col-md-12">
@@ -718,102 +718,102 @@ if(isset($_POST["Userdr"]) && isset($_POST["BDdr"]) && isset($_POST["genderdr"])
                             <div class="col-md-12">
                                 <h5>Add Doctor<button  onclick="clickRow8()" class="btn btt1" type="button"><i class="far fa-window-close"></i></button></h5>
                                 <form action="ProfileAdmain.php" method="post">
-                                <table class="content-table" width="100%">
-                                    <thead>
-                                    <th width="50%"></th>
-                                    <th width="50%"></th>
-                                    </thead>
-                                    <tbody>
-                                    <tr>
-                                        <td class="hhh">
-                                            User Name
-                                        </td>
-                                        <td>
-                                            <input style="" class="ss1" placeholder="User Name" type="text" name="Userdr" required>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td class="hhh">
-                                            Birth Date
-                                        </td>
-                                        <td>
-                                            <input type="date" class="ss1" name="BDdr"required>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td class="hhh">
-                                            Gender
-                                        </td>
-                                        <td>
-                                            <input required  class="sex" name="genderdr" id="l11" type="radio" value="male" ><label class="la" for="l11">Male</label>
-                                            <input class="sex" name="genderdr" id="l22" type="radio" value="female"> <label class="la" for="l22"> Female </label>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td class="hhh">
-                                            Mobile Phone
-                                        </td>
-                                        <td>
-                                            <input required class="butt l3 ss1" type="tel" name="phonedr" pattern="059[0-9]{7}" placeholder="Mobile Number">
-                                        </td>
-                                    </tr>
-<!--                                    <tr>-->
-<!--                                        <td class="hhh">-->
-<!--                                            Password-->
-<!--                                        </td>-->
-<!--                                        <td>-->
-<!--                                            <input class="butt l4 ss1" type="password" placeholder="Password" name="passworddr" required >-->
-<!--                                        </td>-->
-<!--                                    </tr>-->
-                                    <tr>
-                                        <td class="hhh">
-                                            Specialization
-                                        </td>
-                                        <td>
-                                            <input  class="butt l3 ss1" type="text" name="special" placeholder="Specialization">
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td class="hhh">
-                                            Start time
-                                        </td>
-                                        <td>
-                                            <input type="time" name="startdr" class="ss1">
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td class="hhh">
-                                            End time
-                                        </td>
-                                        <td>
-                                            <input type="time" name="enddr" class="ss1">
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td class="hhh">
-                                            Working Days
-                                        </td>
-                                        <td>
+                                    <table class="content-table" width="100%">
+                                        <thead>
+                                        <th width="50%"></th>
+                                        <th width="50%"></th>
+                                        </thead>
+                                        <tbody>
+                                        <tr>
+                                            <td class="hhh">
+                                                User Name
+                                            </td>
+                                            <td>
+                                                <input style="" class="ss1" placeholder="User Name" type="text" name="Userdr" required>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="hhh">
+                                                Birth Date
+                                            </td>
+                                            <td>
+                                                <input type="date" class="ss1" name="BDdr"required>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="hhh">
+                                                Gender
+                                            </td>
+                                            <td>
+                                                <input required  class="sex" name="genderdr" id="l11" type="radio" value="male" ><label class="la" for="l11">Male</label>
+                                                <input class="sex" name="genderdr" id="l22" type="radio" value="female"> <label class="la" for="l22"> Female </label>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="hhh">
+                                                Mobile Phone
+                                            </td>
+                                            <td>
+                                                <input required class="butt l3 ss1" type="tel" name="phonedr" pattern="059[0-9]{7}" placeholder="Mobile Number">
+                                            </td>
+                                        </tr>
+                                        <!--                                    <tr>-->
+                                        <!--                                        <td class="hhh">-->
+                                        <!--                                            Password-->
+                                        <!--                                        </td>-->
+                                        <!--                                        <td>-->
+                                        <!--                                            <input class="butt l4 ss1" type="password" placeholder="Password" name="passworddr" required >-->
+                                        <!--                                        </td>-->
+                                        <!--                                    </tr>-->
+                                        <tr>
+                                            <td class="hhh">
+                                                Specialization
+                                            </td>
+                                            <td>
+                                                <input  class="butt l3 ss1" type="text" name="special" placeholder="Specialization">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="hhh">
+                                                Start time
+                                            </td>
+                                            <td>
+                                                <input type="time" name="startdr" class="ss1">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="hhh">
+                                                End time
+                                            </td>
+                                            <td>
+                                                <input type="time" name="enddr" class="ss1">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="hhh">
+                                                Working Days
+                                            </td>
+                                            <td>
 
-                                            <input name="Saturday" type="checkbox" name="ch1" id="ch1"  value="1"><label for="ch1">Saturday </label>
-                                            <input name="Sunday" type="checkbox" name="ch2" id="ch2" value="1"><label for="ch2">Sunday </label>
-                                            <input name="Monday" type="checkbox" name="ch3"  id="ch3"value="1"><label for="ch3">Monday </label>
-                                            <br>
-                                            <input name="Tuesday" type="checkbox" name="ch4"  id="ch4" value="1"><label for="ch4">Tuesday </label>
-                                            <input name="Wednesday" type="checkbox" name="ch5"  id="ch5" value="1"><label for="ch5">Wednesday </label>
-                                            <input name="Thursday" type="checkbox" name="ch6"  id="ch6" value="1"><label for="ch6">Thursday </label>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
+                                                <input name="Saturday" type="checkbox" name="ch1" id="ch1"  value="1"><label for="ch1">Saturday </label>
+                                                <input name="Sunday" type="checkbox" name="ch2" id="ch2" value="1"><label for="ch2">Sunday </label>
+                                                <input name="Monday" type="checkbox" name="ch3"  id="ch3"value="1"><label for="ch3">Monday </label>
+                                                <br>
+                                                <input name="Tuesday" type="checkbox" name="ch4"  id="ch4" value="1"><label for="ch4">Tuesday </label>
+                                                <input name="Wednesday" type="checkbox" name="ch5"  id="ch5" value="1"><label for="ch5">Wednesday </label>
+                                                <input name="Thursday" type="checkbox" name="ch6"  id="ch6" value="1"><label for="ch6">Thursday </label>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
 
-                                        </td>
-                                        <td>
-                                            <input class="btnadddr ss1" type="submit" value="Add Doctor"></input>
-                                        </td>
-                                    </tr>
-                                    </tbody>
-                                </table>
+                                            </td>
+                                            <td>
+                                                <input class="btnadddr ss1" type="submit" value="Add Doctor"></input>
+                                            </td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
                                 </form>
                             </div>
                         </div>
@@ -866,21 +866,21 @@ if(isset($_POST["Userdr"]) && isset($_POST["BDdr"]) && isset($_POST["genderdr"])
                                     <th width="20%">Doctor Name</th>
                                     <th width="20%">Patient Name</th>
                                     <th width="20%">Date</th>
-<!--                                    <th width="10%">Start Time</th>-->
-<!--                                    <th width="10%">End Time</th>-->
-<!--                                    <th width="10%">State</th>-->
+                                    <!--                                    <th width="10%">Start Time</th>-->
+                                    <!--                                    <th width="10%">End Time</th>-->
+                                    <!--                                    <th width="10%">State</th>-->
                                     <th width="20%">Describtion</th>
                                     <th width="20%">Confirm</th>
                                     </thead>
                                     <tbody>
                                     <script type="text/javascript">
                                         function updatest(){
-                                        // var rowId=event.target.parentNode.id;
-                                        // var data=document.getElementById("btnsave").querySelectorAll('.row-data')
-                                        // alert(data[0]);
-                                        //     var idp=data[0].innerHTML;
-                                        //     location.href="ProfileAdmain.php?x="+idp+"";
-                                        //     window.location.href='';
+                                            // var rowId=event.target.parentNode.id;
+                                            // var data=document.getElementById("btnsave").querySelectorAll('.row-data')
+                                            // alert(data[0]);
+                                            //     var idp=data[0].innerHTML;
+                                            //     location.href="ProfileAdmain.php?x="+idp+"";
+                                            //     window.location.href='';
                                         }
                                     </script>
                                     <?php
@@ -931,7 +931,7 @@ if(isset($_POST["Userdr"]) && isset($_POST["BDdr"]) && isset($_POST["genderdr"])
                                 </script>
                                 <h5>UPDATE</h5>
                                 <table class="content-table" width="100%">
-<!--                                    /////////////////////////////////////////////-->
+                                    <!--                                    /////////////////////////////////////////////-->
                                     <thead>
                                     <th width="25%">Stat Time</th>
                                     <th width="25%">End Time</th>
@@ -939,8 +939,8 @@ if(isset($_POST["Userdr"]) && isset($_POST["BDdr"]) && isset($_POST["genderdr"])
                                     <th width="25%">Update</th>
                                     </thead>
                                     <tbody>
-<!--                                    <form action="ProfileAdmain.php" method="post">-->
-                                        <script type="text/javascript">
+                                    <!--                                    <form action="ProfileAdmain.php" method="post">-->
+                                    <script type="text/javascript">
                                         function ss()
                                         {
                                             // alert(document.getElementById('stpo').value);
@@ -950,37 +950,37 @@ if(isset($_POST["Userdr"]) && isset($_POST["BDdr"]) && isset($_POST["genderdr"])
 
 
                                         }
-                                        </script>
-                                        <?php
-                                        if(isset($_GET['stpo']) && isset($_GET['stpo1']))
-                                        {
-                                            $USN=$_GET['USN'];
-                                            $DSN=$_GET['DSN'];
-                                            $DAA=$_GET['DAA'];
-                                            $stpo=$_GET['stpo'];
-                                            $stpo1=$_GET['stpo1'];
-                                            $stpo2=$_GET['stpo2'] ;
-                                            $db = new mysqli('localhost', 'root', '', 'goodental');
-                                            $qrystr = "UPDATE `recoversession` SET `StartTime` = '$stpo', `EndTime` = '$stpo1', `State` = '$stpo2' WHERE `recoversession`.`DoctorName` = '$USN' AND `recoversession`.`PatientName` = '$DSN' AND `recoversession`.`Date` = '$DAA';";
+                                    </script>
+                                    <?php
+                                    if(isset($_GET['stpo']) && isset($_GET['stpo1']))
+                                    {
+                                        $USN=$_GET['USN'];
+                                        $DSN=$_GET['DSN'];
+                                        $DAA=$_GET['DAA'];
+                                        $stpo=$_GET['stpo'];
+                                        $stpo1=$_GET['stpo1'];
+                                        $stpo2=$_GET['stpo2'] ;
+                                        $db = new mysqli('localhost', 'root', '', 'goodental');
+                                        $qrystr = "UPDATE `recoversession` SET `StartTime` = '$stpo', `EndTime` = '$stpo1', `State` = '$stpo2' WHERE `recoversession`.`DoctorName` = '$USN' AND `recoversession`.`PatientName` = '$DSN' AND `recoversession`.`Date` = '$DAA';";
 //                                            echo $qrystr;
-                                            $res = $db->query($qrystr);
-                                            $db->commit();
-                                            $db->close();
+                                        $res = $db->query($qrystr);
+                                        $db->commit();
+                                        $db->close();
 
 //                                            header("location:http://localhost/Web_Project/PHP/ProfileAdmain.php");
-                                        }
-                                        ?>
-                                        <tr>
-                                            <td><input name="stpo" id="stpo" type="time"></td>
-                                            <td><input name="stpo1" id="stpo1" type="time"></td>
-                                            <td>
-                                                <select name=name="stpo2" id="stpo2" size='1'>
-                                                    <option value='accept'>accept</option>
-                                                    <option value='reject'>reject</option>
-                                                </select>
-                                            </td>
-                                            <td><button style='width: 100%;border-radius: 5px; background-color: #00cccc;color: white;font-weight: bold' onclick="ss()"">Update</button></td>
-                                        </tr>
+                                    }
+                                    ?>
+                                    <tr>
+                                        <td><input name="stpo" id="stpo" type="time"></td>
+                                        <td><input name="stpo1" id="stpo1" type="time"></td>
+                                        <td>
+                                            <select name=name="stpo2" id="stpo2" size='1'>
+                                                <option value='accept'>accept</option>
+                                                <option value='reject'>reject</option>
+                                            </select>
+                                        </td>
+                                        <td><button style='width: 100%;border-radius: 5px; background-color: #00cccc;color: white;font-weight: bold' onclick="ss()"">Update</button></td>
+                                    </tr>
                                     </tbody>
                                 </table>
                             </div>

@@ -5,6 +5,10 @@ body {
     padding-right: 64%;
     padding-left: 10%;
 }
+*{
+    font-family: COCO;
+    font-weight: bold;
+}
 .container {
 
     margin:15%;

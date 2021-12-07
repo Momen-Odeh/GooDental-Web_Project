@@ -23,12 +23,12 @@ if(!isset($_SESSION['Member_level']))
 </head>
 <body>
 <nav>
-<!--  for munebar  -->
+    <!--  for munebar  -->
     <input type="checkbox" id="check">
     <label for="check" class="checkbtn">
         <i class="fas fa-bars"></i>
     </label>
-<!--    -->
+    <!--    -->
     <span class="finallogo">
     <img class="logopic" src="../img/LOGO1.png">
 
@@ -62,31 +62,31 @@ if(!isset($_SESSION['Member_level']))
 <div class="spaceofnav"></div>
 <div class="imgbg">
     <h1 class="titlede ">We Build <br>Your <span style="color:rgb(83,124,206)">Smile</span> </h1>
-<!--    <script>-->
-<!--        window.addEventListener('scroll',()=>{-->
-<!--            let scrl=window.scrollY;-->
-<!--            console.log(scrl);-->
-<!--            if(scrl >= 0 && scrl<=170)-->
-<!--            {-->
-<!--                let scrl1=scrl-50;-->
-<!--                scrl1=scrl1/100;-->
-<!--                document.getElementById("cards").style.opacity=scrl1;-->
-<!--                document.getElementById("cards").style.transform = 'translate'+'('+0+'px,'+'-'+scrl+ 'px)';-->
-<!--            }-->
-<!---->
-<!--        });-->
-<!--    </script>-->
-<!--    <div id="cards" class="maintk">-->
-<!--        <div class="cardss"  >-->
-<!--            <div class="card border-info mb-3" style="max-width: 18rem; background-color: #00cccc ">-->
-<!--                <div class="card-header" style="font-family: 'Ubuntu', sans-serif;font-size: 25px ;color: white;font-weight: bold ">Sign in</div>-->
-<!--                <div class="card-body" style="background: #00cccc; height: 140px ">-->
-<!--                    <h5 class="card-title" style="color: white">See on Map</h5>-->
-<!--                    <p class="card-text" style="color: white">Palestine-Nablus-Howara-AlQuds Street</p>-->
-<!--                </div>-->
-<!--            </div>-->
-<!--        </div>-->
-<!--    </div>-->
+    <!--    <script>-->
+    <!--        window.addEventListener('scroll',()=>{-->
+    <!--            let scrl=window.scrollY;-->
+    <!--            console.log(scrl);-->
+    <!--            if(scrl >= 0 && scrl<=170)-->
+    <!--            {-->
+    <!--                let scrl1=scrl-50;-->
+    <!--                scrl1=scrl1/100;-->
+    <!--                document.getElementById("cards").style.opacity=scrl1;-->
+    <!--                document.getElementById("cards").style.transform = 'translate'+'('+0+'px,'+'-'+scrl+ 'px)';-->
+    <!--            }-->
+    <!---->
+    <!--        });-->
+    <!--    </script>-->
+    <!--    <div id="cards" class="maintk">-->
+    <!--        <div class="cardss"  >-->
+    <!--            <div class="card border-info mb-3" style="max-width: 18rem; background-color: #00cccc ">-->
+    <!--                <div class="card-header" style="font-family: 'Ubuntu', sans-serif;font-size: 25px ;color: white;font-weight: bold ">Sign in</div>-->
+    <!--                <div class="card-body" style="background: #00cccc; height: 140px ">-->
+    <!--                    <h5 class="card-title" style="color: white">See on Map</h5>-->
+    <!--                    <p class="card-text" style="color: white">Palestine-Nablus-Howara-AlQuds Street</p>-->
+    <!--                </div>-->
+    <!--            </div>-->
+    <!--        </div>-->
+    <!--    </div>-->
 </div>
 
 <div class="about-section">
@@ -96,13 +96,13 @@ if(!isset($_SESSION['Member_level']))
             <div class="borders"></div>
         </h1>
         <p class="text"> We never hesitate in our support, and we never lose sight of our main mission: serving our clients. Our job is to always make it easy for clients to do business with us and strive not only</p>
-                    <ul type="DISC" class="text" style="text-align: left">
-                        <li>Simple tooth extractions</li>
-                        <li>Wisdom teeth removal</li>
-                        <li>Cleft palate or lip repair</li>
-                        <li>Removal of tumors found in the oral cavity</li>
-                        <li>Complex jaw realignment surgeries</li>
-                    </ul>
+        <ul type="DISC" class="text" style="text-align: left">
+            <li>Simple tooth extractions</li>
+            <li>Wisdom teeth removal</li>
+            <li>Cleft palate or lip repair</li>
+            <li>Removal of tumors found in the oral cavity</li>
+            <li>Complex jaw realignment surgeries</li>
+        </ul>
     </div>
 </div>
 
