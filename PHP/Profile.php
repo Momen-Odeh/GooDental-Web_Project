@@ -285,7 +285,7 @@ if(isset($_POST['appointdate']) && isset($_POST['DescriptTxt']))
         <div class="col-md-4 mt-1">
             <div class="card text-center sidebar">
                 <div class="card-body">
-                    <img src="../img/pro1.png" class="rounded-circle" width="150" alt="">
+                    <img src="../img/user.png" class="rounded-circle" width="150" alt="">
                     <div class="mt-3">
                         <h3><?php
                             echo "$UserName";
