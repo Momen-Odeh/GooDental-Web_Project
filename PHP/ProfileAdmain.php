@@ -944,13 +944,13 @@ if(isset($_POST["Userdr"]) && isset($_POST["BDdr"]) && isset($_POST["genderdr"])
                                         function ss()
                                         {
                                             // alert(document.getElementById('stpo').value);
-                                            try {
+                                            // try {
                                                 window.location.href=window.location.href+"&stpo="+document.getElementById('stpo').value
                                                     +"&stpo1="+document.getElementById('stpo1').value+"&stpo2="+document.getElementById('stpo2').value+"#row5";
-                                            }catch ()
-                                            {
-
-                                            }
+                                            // }catch ()
+                                            // {
+                                            //
+                                            // }
 
 
 
